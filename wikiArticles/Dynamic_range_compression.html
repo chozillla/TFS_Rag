@@ -1,0 +1,3920 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">
+  Audio signal processing operation
+ </div>
+ <style data-mw-deduplicate="TemplateStyles:r1236090951">
+  .mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}@media print{body.ns-0 .mw-parser-output .hatnote{display:none!important}}
+ </style>
+ <div class="hatnote navigation-not-searchable" role="note">
+  This article is about a process that intentionally reduces the dynamic range of audio signals. For similar reductions caused by circuit imperfections, see
+  <a href="/wiki/Gain_compression" title="Gain compression">
+   Gain compression
+  </a>
+  . For processes that reduce the size of digital audio files, see
+  <a href="/wiki/Data_compression" title="Data compression">
+   Audio compression (data)
+  </a>
+  .
+ </div>
+ <p class="mw-empty-elt">
+ </p>
+ <figure typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Comp._rack_(Supernatural).jpg">
+   <img class="mw-file-element" data-file-height="3910" data-file-width="2196" decoding="async" height="267" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Comp._rack_%28Supernatural%29.jpg/150px-Comp._rack_%28Supernatural%29.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Comp._rack_%28Supernatural%29.jpg/225px-Comp._rack_%28Supernatural%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Comp._rack_%28Supernatural%29.jpg/300px-Comp._rack_%28Supernatural%29.jpg 2x" width="150"/>
+  </a>
+  <figcaption>
+   A rack of audio compressors in a recording studio. From top to bottom: Retro Instruments/Gates STA level; Spectra Sonic 610; Dbx 162; Dbx 165; Empirical Labs Distressor; Smart Research C2; Chandler Limited TG1; Daking FET (91579); and Altec 436c.
+  </figcaption>
+ </figure>
+ <p>
+  <b>
+   Dynamic range compression
+  </b>
+  (
+  <b>
+   DRC
+  </b>
+  ) or simply
+  <b>
+   compression
+  </b>
+  is an
+  <a href="/wiki/Audio_signal_processing" title="Audio signal processing">
+   audio signal processing
+  </a>
+  operation that reduces the volume of loud
+  <a href="/wiki/Sound" title="Sound">
+   sounds
+  </a>
+  or amplifies quiet sounds, thus reducing or
+  <i>
+   compressing
+  </i>
+  an
+  <a href="/wiki/Audio_signal" title="Audio signal">
+   audio signal
+  </a>
+  's
+  <a href="/wiki/Dynamic_range" title="Dynamic range">
+   dynamic range
+  </a>
+  . Compression is commonly used in
+  <a href="/wiki/Sound_recording_and_reproduction" title="Sound recording and reproduction">
+   sound recording and reproduction
+  </a>
+  ,
+  <a href="/wiki/Broadcasting" title="Broadcasting">
+   broadcasting
+  </a>
+  ,
+  <sup class="reference" id="cite_ref-Follansbee_1-0">
+   <a href="#cite_note-Follansbee-1">
+    [1]
+   </a>
+  </sup>
+  <a href="/wiki/Sound_reinforcement_system" title="Sound reinforcement system">
+   live sound reinforcement
+  </a>
+  and some
+  <a href="/wiki/Instrument_amplifier" title="Instrument amplifier">
+   instrument amplifiers
+  </a>
+  .
+ </p>
+ <p>
+  A dedicated electronic hardware unit or audio software that applies compression is called a
+  <b>
+   compressor
+  </b>
+  . In the 2000s, compressors became available as software plugins that run in
+  <a href="/wiki/Digital_audio_workstation" title="Digital audio workstation">
+   digital audio workstation
+  </a>
+  software. In recorded and live music, compression parameters may be adjusted to change the way they affect sounds. Compression and
+  <a href="/wiki/Limiter" title="Limiter">
+   limiting
+  </a>
+  are identical in process but different in degree and perceived effect. A limiter is a compressor with a high
+  <a href="#Ratio">
+   ratio
+  </a>
+  and, generally, a short
+  <a href="#Attack_and_release">
+   attack time
+  </a>
+  .
+ </p>
+ <p>
+  Compression is used to improve performance and clarity in
+  <a href="/wiki/Public_address_system" title="Public address system">
+   public address systems
+  </a>
+  , as an
+  <a href="/wiki/Effects_unit" title="Effects unit">
+   effect
+  </a>
+  and to improve consistency in
+  <a href="/wiki/Audio_mixing_(recorded_music)" title="Audio mixing (recorded music)">
+   mixing
+  </a>
+  and
+  <a href="/wiki/Mastering_(audio)" title="Mastering (audio)">
+   mastering
+  </a>
+  . It is used on voice to reduce sibilance and in
+  <a href="/wiki/Broadcasting" title="Broadcasting">
+   broadcasting
+  </a>
+  and
+  <a href="/wiki/Advertising" title="Advertising">
+   advertising
+  </a>
+  to make an audio program stand out. It is an integral technology in some
+  <a href="/wiki/Noise_reduction" title="Noise reduction">
+   noise reduction
+  </a>
+  systems.
+ </p>
+ <meta property="mw:PageProp/toc"/>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Types">
+   Types
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=1" title="Edit section: Types">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <style data-mw-deduplicate="TemplateStyles:r1096954695/mw-parser-output/.tmulti">
+  .mw-parser-output .tmulti .multiimageinner{display:flex;flex-direction:column}.mw-parser-output .tmulti .trow{display:flex;flex-direction:row;clear:left;flex-wrap:wrap;width:100%;box-sizing:border-box}.mw-parser-output .tmulti .tsingle{margin:1px;float:left}.mw-parser-output .tmulti .theader{clear:both;font-weight:bold;text-align:center;align-self:center;background-color:transparent;width:100%}.mw-parser-output .tmulti .thumbcaption{background-color:transparent}.mw-parser-output .tmulti .text-align-left{text-align:left}.mw-parser-output .tmulti .text-align-right{text-align:right}.mw-parser-output .tmulti .text-align-center{text-align:center}@media all and (max-width:720px){.mw-parser-output .tmulti .thumbinner{width:100%!important;box-sizing:border-box;max-width:none!important;align-items:center}.mw-parser-output .tmulti .trow{justify-content:center}.mw-parser-output .tmulti .tsingle{float:none!important;max-width:100%!important;box-sizing:border-box;text-align:center}.mw-parser-output .tmulti .tsingle .thumbcaption{text-align:left}.mw-parser-output .tmulti .trow>.thumbcaption{text-align:center}}
+ </style>
+ <div class="thumb tmulti tleft">
+  <div class="thumbinner multiimageinner" style="width:492px;max-width:492px">
+   <div class="trow">
+    <div class="theader">
+     <b>
+      Two methods of dynamic range compression
+     </b>
+    </div>
+   </div>
+   <div class="trow">
+    <div class="tsingle" style="width:258px;max-width:258px">
+     <div class="thumbimage" style="height:182px;overflow:hidden">
+      <span typeof="mw:File">
+       <a class="mw-file-description" href="/wiki/File:Audio-level-compresion-diagram-01.svg">
+        <img alt="Downward compression diagram" class="mw-file-element" data-file-height="400" data-file-width="563" decoding="async" height="182" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Audio-level-compresion-diagram-01.svg/256px-Audio-level-compresion-diagram-01.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Audio-level-compresion-diagram-01.svg/384px-Audio-level-compresion-diagram-01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Audio-level-compresion-diagram-01.svg/512px-Audio-level-compresion-diagram-01.svg.png 2x" width="256"/>
+       </a>
+      </span>
+     </div>
+     <div class="thumbcaption text-align-center">
+      Downward compression
+     </div>
+    </div>
+    <div class="tsingle" style="width:230px;max-width:230px">
+     <div class="thumbimage" style="height:182px;overflow:hidden">
+      <span typeof="mw:File">
+       <a class="mw-file-description" href="/wiki/File:Upward_compression.svg">
+        <img alt="Upward compression diagram" class="mw-file-element" data-file-height="400" data-file-width="500" decoding="async" height="182" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Upward_compression.svg/228px-Upward_compression.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Upward_compression.svg/342px-Upward_compression.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Upward_compression.svg/456px-Upward_compression.svg.png 2x" width="228"/>
+       </a>
+      </span>
+     </div>
+     <div class="thumbcaption text-align-center">
+      Upward compression
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <p>
+  There are two types of compression: downward and upward. Both types of compression reduce the
+  <a href="/wiki/Dynamic_range#Audio" title="Dynamic range">
+   dynamic range
+  </a>
+  of an audio signal.
+  <sup class="reference" id="cite_ref-Reese_2-0">
+   <a href="#cite_note-Reese-2">
+    [2]
+   </a>
+  </sup>
+ </p>
+ <p>
+  <i>
+   Downward
+  </i>
+  compression reduces the volume of loud sounds
+  <i>
+   above
+  </i>
+  a certain threshold. The quiet sounds
+  <i>
+   below
+  </i>
+  the threshold remain unaffected. This is the most common type of compressor. A
+  <a href="/wiki/Limiter" title="Limiter">
+   limiter
+  </a>
+  can be thought of as an extreme form of downward compression as it compresses the sounds over the threshold especially hard.
+ </p>
+ <p>
+  <i>
+   Upward
+  </i>
+  compression increases the volume of quiet sounds
+  <i>
+   below
+  </i>
+  a certain threshold. The louder sounds
+  <i>
+   above
+  </i>
+  the threshold remain unaffected.
+ </p>
+ <p>
+  Some compressors also have the ability to do the
+  <i>
+   opposite
+  </i>
+  of compression, namely
+  <i>
+   expansion
+  </i>
+  . Expansion
+  <i>
+   increases
+  </i>
+  the dynamic range of the audio signal.
+  <sup class="reference" id="cite_ref-3">
+   <a href="#cite_note-3">
+    [3]
+   </a>
+  </sup>
+  Like compression, expansion comes in two types, downward and upward.
+ </p>
+ <p>
+  <i>
+   Downward
+  </i>
+  expansion makes the quiet sounds below the threshold even quieter. A
+  <a href="/wiki/Noise_gate" title="Noise gate">
+   noise gate
+  </a>
+  can be thought of as an extreme form of downward expansion as the noise gate make the quiet sounds (for instance: noise) quieter or even silent, depending on the floor setting.
+  <sup class="reference" id="cite_ref-Reese_2-1">
+   <a href="#cite_note-Reese-2">
+    [2]
+   </a>
+  </sup>
+ </p>
+ <p>
+  <i>
+   Upward
+  </i>
+  expansion makes the louder sounds above the threshold even louder.
+ </p>
+ <div class="" style="clear:both;">
+ </div>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Design">
+   Design
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=2" title="Edit section: Design">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure typeof="mw:File/Frame">
+  <a class="mw-file-description" href="/wiki/File:Compressors_Feed_Design.gif">
+   <img class="mw-file-element" data-file-height="145" data-file-width="399" decoding="async" height="145" src="//upload.wikimedia.org/wikipedia/en/d/d4/Compressors_Feed_Design.gif" width="399"/>
+  </a>
+  <figcaption>
+   A feed-forward compressor design (left) and feedback design (right)
+  </figcaption>
+ </figure>
+ <p>
+  The signal entering a compressor is split; one copy is sent to a
+  <a href="/wiki/Variable-gain_amplifier" title="Variable-gain amplifier">
+   variable-gain amplifier
+  </a>
+  and the other to a
+  <i>
+   side-chain
+  </i>
+  where the signal level is measured and a circuit controlled by the measured signal level applies the required gain to the amplifier. This design, known as a
+  <i>
+   feed-forward
+  </i>
+  type, is used today in most compressors. Earlier designs were based on a
+  <i>
+   feedback
+  </i>
+  layout where the signal level was measured after the amplifier.
+  <sup class="reference" id="cite_ref-4">
+   <a href="#cite_note-4">
+    [4]
+   </a>
+  </sup>
+ </p>
+ <p>
+  There are a number of technologies used for variable-gain amplification, each having different advantages and disadvantages.
+  <a href="/wiki/Vacuum_tube" title="Vacuum tube">
+   Vacuum tubes
+  </a>
+  are used in a configuration called
+  <i>
+   variable-mu
+  </i>
+  where the grid-to-cathode voltage changes to alter the gain.
+  <sup class="reference" id="cite_ref-5">
+   <a href="#cite_note-5">
+    [5]
+   </a>
+  </sup>
+  Optical compressors use a
+  <a href="/wiki/Photoresistor" title="Photoresistor">
+   photoresistor
+  </a>
+  stimulated by a small lamp (
+  <a href="/wiki/Incandescent_light_bulb" title="Incandescent light bulb">
+   incandescent
+  </a>
+  ,
+  <a href="/wiki/Light-emitting_diode" title="Light-emitting diode">
+   LED
+  </a>
+  , or
+  <a href="/wiki/Electroluminescence" title="Electroluminescence">
+   electroluminescent panel
+  </a>
+  )
+  <sup class="reference" id="cite_ref-6">
+   <a href="#cite_note-6">
+    [6]
+   </a>
+  </sup>
+  to create changes in signal gain. Other technologies used include
+  <a class="mw-redirect" href="/wiki/Field_effect_transistor" title="Field effect transistor">
+   field effect transistors
+  </a>
+  and a
+  <a href="/wiki/Diode_bridge" title="Diode bridge">
+   diode bridge
+  </a>
+  .
+  <sup class="reference" id="cite_ref-7">
+   <a href="#cite_note-7">
+    [7]
+   </a>
+  </sup>
+ </p>
+ <p>
+  When working with digital audio,
+  <a href="/wiki/Digital_signal_processing" title="Digital signal processing">
+   digital signal processing
+  </a>
+  (DSP) techniques are commonly used to implement compression as
+  <a href="/wiki/Audio_plug-in" title="Audio plug-in">
+   audio plug-ins
+  </a>
+  , in
+  <a href="/wiki/Mixing_console" title="Mixing console">
+   mixing consoles
+  </a>
+  , and in
+  <a href="/wiki/Digital_audio_workstation" title="Digital audio workstation">
+   digital audio workstations
+  </a>
+  . Often the algorithms are used to emulate the above analog technologies.
+  <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+   [
+   <i>
+    <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+     <span title="This claim needs references to reliable sources. (May 2019)">
+      citation needed
+     </span>
+    </a>
+   </i>
+   ]
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Controls_and_features">
+   Controls and features
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=3" title="Edit section: Controls and features">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure class="mw-halign-right" typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Compression_ratio.svg">
+   <img class="mw-file-element" data-file-height="400" data-file-width="500" decoding="async" height="176" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Compression_ratio.svg/220px-Compression_ratio.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Compression_ratio.svg/330px-Compression_ratio.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Compression_ratio.svg/440px-Compression_ratio.svg.png 2x" width="220"/>
+  </a>
+  <figcaption>
+   Different compression ratios for a signal level above the threshold
+  </figcaption>
+ </figure>
+ <p>
+  A number of user-adjustable control parameters and features are used to adjust dynamic range compression signal processing algorithms and components.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Threshold">
+   Threshold
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=4" title="Edit section: Threshold">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  A compressor reduces the level of an audio signal if its amplitude exceeds a certain
+  <i>
+   threshold
+  </i>
+  . Threshold is commonly set in
+  <a class="mw-redirect" href="/wiki/Decibels" title="Decibels">
+   decibels
+  </a>
+  (
+  <a href="/wiki/DBFS" title="DBFS">
+   dBFS
+  </a>
+  for digital compressors and
+  <a class="mw-redirect" href="/wiki/DBu" title="DBu">
+   dBu
+  </a>
+  for hardware compressors),
+  <sup class="reference" id="cite_ref-8">
+   <a href="#cite_note-8">
+    [8]
+   </a>
+  </sup>
+  where a lower threshold (e.g.
+  <span class="nowrap">
+  </span>
+  −60 dB) means a larger portion of the signal is treated. When the signal level is below the threshold, no processing is performed and the input signal is passed, unmodified, to the output. Thus a higher threshold of, e.g.,
+  <span class="nowrap">
+  </span>
+  −5 dB, results in less processing, less compression.
+ </p>
+ <p>
+  Threshold timing behavior is subject to attack and release settings (see
+  <a href="#Attack_and_release">
+   below
+  </a>
+  ). When the signal level goes above threshold, compressor operation is delayed by the
+  <i>
+   attack
+  </i>
+  setting. For an amount of time determined by the
+  <i>
+   release
+  </i>
+  after the input signal has fallen below the threshold, the compressor continues to apply dynamic range compression.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Ratio">
+   Ratio
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=5" title="Edit section: Ratio">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  The amount of gain reduction is determined by
+  <b>
+   ratio
+  </b>
+  : a ratio of 4:1 means that if input level is 4
+  <a href="/wiki/Decibel" title="Decibel">
+   dB
+  </a>
+  over the threshold, the output signal level is reduced to 1 dB over the threshold. The gain and output level has been reduced by 3 dB. Another way of stating this is that any input signal level over the threshold will, in this case, be output at a level which is only 25%
+  <span class="nowrap">
+   (i.e. 1 over 4)
+  </span>
+  as much over the threshold as its input level was.
+ </p>
+ <p>
+  The highest ratio of
+  <span class="mwe-math-element">
+   <span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;">
+    <math alttext="{\displaystyle \infty }" xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow class="MJX-TeXAtom-ORD">
+       <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">
+         ∞
+         <!-- ∞ -->
+        </mi>
+       </mstyle>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       {\displaystyle \infty }
+      </annotation>
+     </semantics>
+    </math>
+   </span>
+   <img alt="{\displaystyle \infty }" aria-hidden="true" class="mwe-math-fallback-image-inline mw-invert skin-invert" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c26c105004f30c27aa7c2a9c601550a4183b1f21" style="vertical-align: -0.338ex; width:2.324ex; height:1.676ex;"/>
+  </span>
+  :1 is often known as
+  <i>
+   limiting
+  </i>
+  , and effectively denotes that any signal above the threshold is brought down to the threshold level once the
+  <i>
+   attack
+  </i>
+  time has expired.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Attack_and_release">
+   Attack and release
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=6" title="Edit section: Attack and release">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Audio_Compression_Attack_and_Release-2.svg">
+   <img class="mw-file-element" data-file-height="300" data-file-width="600" decoding="async" height="110" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Audio_Compression_Attack_and_Release-2.svg/220px-Audio_Compression_Attack_and_Release-2.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Audio_Compression_Attack_and_Release-2.svg/330px-Audio_Compression_Attack_and_Release-2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Audio_Compression_Attack_and_Release-2.svg/440px-Audio_Compression_Attack_and_Release-2.svg.png 2x" width="220"/>
+  </a>
+  <figcaption>
+   The attack and release phases in a compressor
+  </figcaption>
+ </figure>
+ <p>
+  A compressor may provide a degree of control over how quickly it acts. The
+  <i>
+   attack
+  </i>
+  is the period when the compressor is decreasing gain in response to the increased level at the input to reach the gain determined by the ratio. The
+  <i>
+   release
+  </i>
+  is the period when the compressor is increasing gain in response to reduced level at the input to reach the output gain determined by the ratio, or, to unity, once the input level has fallen below the threshold. Because the loudness pattern of the source material is modified by the time-varying operation of compressor, it may change the character of the signal in subtle to quite noticeable ways depending on the attack and release settings used.
+ </p>
+ <p>
+  The length of each period is determined by the rate of change and the required change in gain. For more intuitive operation, a compressor's attack and release controls are labeled as a unit of time (often milliseconds). This is the amount of time it takes for the gain to change a set amount of dB or a set percentage towards the target gain. There is no industry standard for the exact meaning of these time parameters.
+  <sup class="reference" id="cite_ref-9">
+   <a href="#cite_note-9">
+    [9]
+   </a>
+  </sup>
+ </p>
+ <p>
+  In many compressors, the attack and release times are adjustable by the user. Some compressors, however, have the attack and release times determined by the circuit design and cannot be adjusted. Sometimes the attack and release times are
+  <i>
+   automatic
+  </i>
+  or
+  <i>
+   program dependent
+  </i>
+  , meaning that the behavior may change depending on the input signal.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Soft_and_hard_knees">
+   Soft and hard knees
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=7" title="Edit section: Soft and hard knees">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure class="mw-halign-right" typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Compression_knee.svg">
+   <img class="mw-file-element" data-file-height="300" data-file-width="450" decoding="async" height="147" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Compression_knee.svg/220px-Compression_knee.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Compression_knee.svg/330px-Compression_knee.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Compression_knee.svg/440px-Compression_knee.svg.png 2x" width="220"/>
+  </a>
+  <figcaption>
+   Hard Knee and Soft Knee compression
+  </figcaption>
+ </figure>
+ <p>
+  Another control a compressor might offer is hard knee or soft knee selection.  This controls whether the bend in the response curve between below threshold and above threshold is abrupt (hard) or gradual (soft). A soft knee slowly increases the compression ratio as the level increases and eventually reaches the compression ratio set by the user. A soft knee reduces the potentially audible transition from uncompressed to compressed, and is especially applicable for higher ratio settings where the changeover at the threshold would be more noticeable.
+  <sup class="reference" id="cite_ref-10">
+   <a href="#cite_note-10">
+    [10]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Peak_vs_RMS_sensing">
+   Peak vs RMS sensing
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=8" title="Edit section: Peak vs RMS sensing">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  A peak-sensing compressor responds to the peak level of the input signal. While providing tighter peak level control, peak level sensing does not necessarily relate to human perception of loudness. Some compressors apply a power measurement function (commonly
+  <a href="/wiki/Root_mean_square" title="Root mean square">
+   root mean square
+  </a>
+  or RMS) on the input signal before comparing its level to the threshold. This produces a more relaxed compression that more closely relates to human perception of loudness.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Stereo_linking">
+   Stereo linking
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=9" title="Edit section: Stereo linking">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  A compressor in
+  <i>
+   stereo linking
+  </i>
+  mode applies the same amount of gain reduction to both the left and right channels. This is done to prevent image shifting that can occur if each channel is compressed individually.
+  <sup class="reference" id="cite_ref-11">
+   <a href="#cite_note-11">
+    [11]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Make-up_gain">
+   Make-up gain
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=10" title="Edit section: Make-up gain">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Because a downward compressor only reduces the level of the signal, the ability to add a fixed amount of
+  <i>
+   make-up gain
+  </i>
+  at the output is usually provided so that an optimum output level is produced.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Look-ahead">
+   Look-ahead
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=11" title="Edit section: Look-ahead">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  The look-ahead function is designed to overcome the problem of being forced to compromise between slow attack rates that produce smooth-sounding gain changes, and fast attack rates capable of catching transients. Look-ahead is implemented by splitting the input signal and delaying one side (the audio signal) by the look-ahead time. The non-delayed side (the gain control signal) is used to drive the compression of the delayed signal, which then appears at the output. This way a smooth-sounding slower attack rate can be used to catch transients. The cost of this solution is added
+  <a class="mw-redirect" href="/wiki/Audio_latency" title="Audio latency">
+   audio latency
+  </a>
+  through the processor.
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Uses">
+   Uses
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=12" title="Edit section: Uses">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Public_spaces">
+   Public spaces
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=13" title="Edit section: Public spaces">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Compression is often applied in audio systems for restaurants, retail, and similar public environments that play background music at a relatively low volume and need it compressed, not just to keep the volume fairly constant, but also to make quiet parts of the music audible over ambient noise.
+ </p>
+ <p>
+  Compression can increase average output gain of a
+  <a href="/wiki/Amplifier" title="Amplifier">
+   power amplifier
+  </a>
+  by 50 to 100% with a reduced dynamic range.
+  <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+   [
+   <i>
+    <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+     <span title="This claim needs references to reliable sources. (May 2020)">
+      citation needed
+     </span>
+    </a>
+   </i>
+   ]
+  </sup>
+  For paging and evacuation systems, this adds clarity under noisy circumstances and saves on the number of amplifiers required.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Music_production">
+   Music production
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=14" title="Edit section: Music production">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure class="mw-default-size" typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Behringer_CD400_Compressor_8198.jpg">
+   <img class="mw-file-element" data-file-height="3000" data-file-width="3000" decoding="async" height="220" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Behringer_CD400_Compressor_8198.jpg/220px-Behringer_CD400_Compressor_8198.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Behringer_CD400_Compressor_8198.jpg/330px-Behringer_CD400_Compressor_8198.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Behringer_CD400_Compressor_8198.jpg/440px-Behringer_CD400_Compressor_8198.jpg 2x" width="220"/>
+  </a>
+  <figcaption>
+   An inexpensive guitar compressor
+  </figcaption>
+ </figure>
+ <p>
+  Compression is often used in music production to make instruments more consistent in dynamic range, so that they "sit" more nicely in the mix with the other instruments (neither disappear during short periods of time, nor overpower the other instruments during short periods).
+  <sup class="reference" id="cite_ref-broadcastbridge_12-0">
+   <a href="#cite_note-broadcastbridge-12">
+    [12]
+   </a>
+  </sup>
+  Vocal performances in
+  <a href="/wiki/Rock_and_roll" title="Rock and roll">
+   rock music
+  </a>
+  or
+  <a href="/wiki/Pop_music" title="Pop music">
+   pop music
+  </a>
+  are compressed for the same reason.
+ </p>
+ <p>
+  Compression can also be used on instrument sounds to create effects not primarily focused on stabilizing the volume. For instance, drum and cymbal sounds tend to decay quickly, but a compressor can make the sound appear to have a more sustained tail.  Guitar sounds are often compressed to produce a fuller, more sustained sound.
+ </p>
+ <p>
+  Most devices capable of compressing audio dynamics can also be used to reduce the volume of one audio source when another audio source reaches a certain level; this is called
+  <a class="mw-selflink-fragment" href="#Side-chaining">
+   side-chaining
+  </a>
+  .
+  <sup class="reference" id="cite_ref-13">
+   <a href="#cite_note-13">
+    [13]
+   </a>
+  </sup>
+  In
+  <a href="/wiki/Electronic_dance_music" title="Electronic dance music">
+   electronic dance music
+  </a>
+  , side-chaining is often used on
+  <a href="/wiki/Bassline" title="Bassline">
+   basslines
+  </a>
+  , controlled by the kick drum or a similar percussive trigger, to prevent the two from conflicting, and provide a pulsating, rhythmic dynamic to the sound.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Voice">
+   Voice
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=15" title="Edit section: Voice">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  A compressor can be used to reduce
+  <a class="mw-redirect" href="/wiki/Sibilant_consonant" title="Sibilant consonant">
+   sibilance
+  </a>
+  ('ess' sounds) in vocals (
+  <a href="/wiki/De-essing" title="De-essing">
+   de-essing
+  </a>
+  ) by feeding the compressor's side-chain an
+  <a href="/wiki/Equalization_(audio)" title="Equalization (audio)">
+   equalized
+  </a>
+  version of the input signal, so that specific, sibilance-related frequencies (typically 4000 to 8000 hz) activate the compressor more.
+  <sup class="reference" id="cite_ref-14">
+   <a href="#cite_note-14">
+    [14]
+   </a>
+  </sup>
+ </p>
+ <p>
+  Compression is used in voice communications in
+  <a href="/wiki/Amateur_radio" title="Amateur radio">
+   amateur radio
+  </a>
+  that employ
+  <a href="/wiki/Single-sideband_modulation" title="Single-sideband modulation">
+   single-sideband (SSB) modulation
+  </a>
+  to make a particular station's signal more readable to a distant station, or to make one's station's transmitted signal stand out against others.  This is applicable especially in
+  <a href="/wiki/DXing" title="DXing">
+   DXing
+  </a>
+  . An SSB signal's strength depends on the level of
+  <a href="/wiki/Modulation" title="Modulation">
+   modulation
+  </a>
+  . A compressor increases the average level of the modulation signal thus increasing the transmitted signal strength. Most modern amateur radio SSB transceivers have speech compressors built-in. Compression is also used in
+  <a href="/wiki/Two-way_radio" title="Two-way radio">
+   land mobile radio
+  </a>
+  , especially in transmitted audio of professional
+  <a href="/wiki/Walkie-talkie" title="Walkie-talkie">
+   walkie-talkies
+  </a>
+  and
+  <a href="/wiki/Tone_remote" title="Tone remote">
+   remote control dispatch consoles
+  </a>
+  .
+  <sup class="reference" id="cite_ref-15">
+   <a href="#cite_note-15">
+    [15]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Broadcasting">
+   Broadcasting
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=16" title="Edit section: Broadcasting">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Compression is used extensively in
+  <a href="/wiki/Broadcasting" title="Broadcasting">
+   broadcasting
+  </a>
+  to boost the perceived volume of sound while reducing the dynamic range of source audio. To avoid
+  <a href="/wiki/Overmodulation" title="Overmodulation">
+   overmodulation
+  </a>
+  , broadcasters in most countries have legal limits on instantaneous peak volume they may broadcast. Normally these limits are met by permanently inserted compression hardware in the on-air chain.
+ </p>
+ <p>
+  Broadcasters use compressors in order that their station sounds louder than comparable stations. The effect is to make the more heavily compressed station jump out at the listener at a given volume setting.
+  <sup class="reference" id="cite_ref-broadcastbridge_12-1">
+   <a href="#cite_note-broadcastbridge-12">
+    [12]
+   </a>
+  </sup>
+  This is not limited to inter-channel differences; they also exist between programme material within the same channel. Loudness differences are a frequent source of audience complaints, especially TV commercials and promos that seem too loud.
+ </p>
+ <p>
+  The
+  <a href="/wiki/European_Broadcasting_Union" title="European Broadcasting Union">
+   European Broadcasting Union
+  </a>
+  (EBU) has been addressing this issue in the EBU PLOUD group, which consists of over 240 audio professionals, many from broadcasters and equipment manufacturers. In 2010, the EBU published
+  <a href="/wiki/EBU_R_128" title="EBU R 128">
+   EBU R 128
+  </a>
+  which introduces a new way of metering and
+  <a href="/wiki/Audio_normalization" title="Audio normalization">
+   normalizing audio
+  </a>
+  . The Recommendation uses
+  <a class="mw-redirect" href="/wiki/ITU-R_BS.1770" title="ITU-R BS.1770">
+   ITU-R BS.1770
+  </a>
+  loudness metering. As of 2016
+  <sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;">
+   <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Dynamic_range_compression&amp;action=edit">
+    [update]
+   </a>
+  </sup>
+  , several European TV stations have announced their support for the new norm
+  <sup class="reference" id="cite_ref-16">
+   <a href="#cite_note-16">
+    [16]
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-17">
+   <a href="#cite_note-17">
+    [17]
+   </a>
+  </sup>
+  and over 20 manufacturers have announced products supporting the new
+  <i>
+   EBU Mode
+  </i>
+  loudness meters.
+  <sup class="reference" id="cite_ref-EBU3341_18-0">
+   <a href="#cite_note-EBU3341-18">
+    [18]
+   </a>
+  </sup>
+  <sup class="noprint Inline-Template" style="white-space:nowrap;">
+   [
+   <i>
+    <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">
+     <span title="Does not support manufacturers (October 2020)">
+      failed verification
+     </span>
+    </a>
+   </i>
+   ]
+  </sup>
+ </p>
+ <p>
+  To help audio engineers understand what loudness range their material consists of (e.g. to check if some compression may be needed to fit it into the channel of a specific delivery platform), the EBU also introduced the
+  <i>
+   Loudness Range
+  </i>
+  (LRA) descriptor.
+  <sup class="reference" id="cite_ref-EBU3342_19-0">
+   <a href="#cite_note-EBU3342-19">
+    [19]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Marketing">
+   Marketing
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=17" title="Edit section: Marketing">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Most television commercials are heavily compressed to achieve near-maximum perceived loudness while staying within permissible limits. This causes a problem that TV viewers often notice: when a station switches from minimally compressed program material to a heavily compressed commercial, the volume sometimes seems to increase dramatically. Peak loudness might be the same—meeting the letter of the law—but high compression puts much more of the audio in the commercial at close to the maximum allowable, making the commercial seem much louder.
+  <sup class="reference" id="cite_ref-20">
+   <a href="#cite_note-20">
+    [20]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Over-usage">
+   Over-usage
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=18" title="Edit section: Over-usage">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure class="mw-halign-right" typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Cd_loudness_trend-something.gif">
+   <img class="mw-file-element" data-file-height="265" data-file-width="552" decoding="async" height="146" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Cd_loudness_trend-something.gif/305px-Cd_loudness_trend-something.gif" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Cd_loudness_trend-something.gif/458px-Cd_loudness_trend-something.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/a/ab/Cd_loudness_trend-something.gif 2x" width="305"/>
+  </a>
+  <figcaption>
+   The trend of increasing loudness as shown by waveform images of the song "
+   <a href="/wiki/Something_(Beatles_song)" title="Something (Beatles song)">
+    Something
+   </a>
+   " by
+   <a href="/wiki/The_Beatles" title="The Beatles">
+    The Beatles
+   </a>
+   mastered on CD four times since 1983
+  </figcaption>
+ </figure>
+ <link href="mw-data:TemplateStyles:r1236090951" rel="mw-deduplicated-inline-style"/>
+ <div class="hatnote navigation-not-searchable" role="note">
+  See also:
+  <a href="/wiki/Loudness_war" title="Loudness war">
+   Loudness war
+  </a>
+ </div>
+ <p>
+  Record companies, mixing engineers and mastering engineers have been gradually increasing the overall
+  <a href="/wiki/Loudness" title="Loudness">
+   loudness
+  </a>
+  of commercial albums. This is achieved by using higher degrees of compression and limiting during
+  <a href="/wiki/Audio_mixing_(recorded_music)" title="Audio mixing (recorded music)">
+   mixing
+  </a>
+  and
+  <a class="mw-redirect" href="/wiki/Audio_mastering" title="Audio mastering">
+   mastering
+  </a>
+  ; compression algorithms have been engineered specifically to accomplish the task of maximizing audio level in the digital stream. Hard limiting or
+  <a href="/wiki/Clipping_(audio)" title="Clipping (audio)">
+   clipping
+  </a>
+  can result, affecting the tone and timbre of the music. The effort to increase loudness has been referred to as the
+  <a href="/wiki/Loudness_war" title="Loudness war">
+   loudness war
+  </a>
+  .
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Other_uses">
+   Other uses
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=19" title="Edit section: Other uses">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  <a class="mw-redirect" href="/wiki/Noise_reduction_system" title="Noise reduction system">
+   Noise reduction systems
+  </a>
+  use a compressor to reduce the dynamic range of a signal for transmission or recording, expanding it afterward, a process called
+  <a href="/wiki/Companding" title="Companding">
+   companding
+  </a>
+  . This reduces the effects of a channel or recording medium with limited dynamic range.
+ </p>
+ <p>
+  <a href="/wiki/Instrument_amplifier" title="Instrument amplifier">
+   Instrument amplifiers
+  </a>
+  often include compression circuitry to prevent sudden high-wattage peaks that could damage the speakers.
+  <a class="mw-redirect" href="/wiki/Electric_bass" title="Electric bass">
+   Electric bass
+  </a>
+  players often use compression effects, either
+  <a href="/wiki/Effects_unit" title="Effects unit">
+   effects units
+  </a>
+  available in pedal,
+  <a class="mw-redirect" href="/wiki/Rackmount" title="Rackmount">
+   rackmount
+  </a>
+  units, or built-in devices in bass amps, to even out the sound levels of their
+  <a href="/wiki/Bassline" title="Bassline">
+   basslines
+  </a>
+  .
+ </p>
+ <p>
+  <a class="mw-redirect" href="/wiki/Gain_pumping" title="Gain pumping">
+   Gain pumping
+  </a>
+  , where a regular amplitude peak (such as a kick drum) causes the rest of the mix to change in volume due to the compressor, is generally avoided in music production. However, many
+  <a href="/wiki/Electronic_dance_music" title="Electronic dance music">
+   dance
+  </a>
+  and hip-hop musicians purposefully use this phenomenon, causing the mix to alter in volume rhythmically in time with the beat.
+  <sup class="reference" id="cite_ref-21">
+   <a href="#cite_note-21">
+    [21]
+   </a>
+  </sup>
+ </p>
+ <p>
+  <a href="/wiki/Hearing_aid" title="Hearing aid">
+   Hearing aids
+  </a>
+  use a compressor to bring the audio volume into the listener's hearing range. To help the patient perceive the direction sound comes from, some hearing aids use
+  <a href="/wiki/Binaural_recording" title="Binaural recording">
+   binaural
+  </a>
+  compression.
+  <sup class="reference" id="cite_ref-22">
+   <a href="#cite_note-22">
+    [22]
+   </a>
+  </sup>
+ </p>
+ <p>
+  Compressors are also used for
+  <a href="/wiki/Hearing_protection_device" title="Hearing protection device">
+   hearing protection
+  </a>
+  in some electronic active hearing protection
+  <a href="/wiki/Earmuffs" title="Earmuffs">
+   earmuffs
+  </a>
+  and
+  <a class="mw-redirect" href="/wiki/Earplugs" title="Earplugs">
+   earplugs
+  </a>
+  , to let sounds at ordinary volumes be heard normally while attenuating louder sounds, possibly also amplifying softer sounds. This allows, for example, shooters wearing hearing protection at a shooting range to converse normally, while sharply attenuating the much louder sounds of the gunshots,
+  <sup class="reference" id="cite_ref-23">
+   <a href="#cite_note-23">
+    [23]
+   </a>
+  </sup>
+  and similarly for musicians to hear quiet music but be protected from loud noises such as drums or cymbal crashes.
+  <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+   [
+   <i>
+    <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+     <span title="This claim needs references to reliable sources. (December 2013)">
+      citation needed
+     </span>
+    </a>
+   </i>
+   ]
+  </sup>
+ </p>
+ <p>
+  In applications of machine learning where an algorithm is training on audio samples, dynamic range compression is a way to augment samples for a larger data set.
+  <sup class="reference" id="cite_ref-24">
+   <a href="#cite_note-24">
+    [24]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Limiting">
+   Limiting
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=20" title="Edit section: Limiting">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Clipping_compared_to_limiting.svg">
+   <img class="mw-file-element" data-file-height="650" data-file-width="1000" decoding="async" height="143" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Clipping_compared_to_limiting.svg/220px-Clipping_compared_to_limiting.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Clipping_compared_to_limiting.svg/330px-Clipping_compared_to_limiting.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Clipping_compared_to_limiting.svg/440px-Clipping_compared_to_limiting.svg.png 2x" width="220"/>
+  </a>
+  <figcaption>
+   Limiting and clipping compared. Note that clipping introduces a large amount of distortion whereas limiting only introduces a small amount while keeping the signal within the threshold.
+  </figcaption>
+ </figure>
+ <link href="mw-data:TemplateStyles:r1236090951" rel="mw-deduplicated-inline-style"/>
+ <div class="hatnote navigation-not-searchable" role="note">
+  Main article:
+  <a href="/wiki/Limiter" title="Limiter">
+   Limiter
+  </a>
+ </div>
+ <p>
+  Compression and limiting are identical in process but different in degree and perceived effect. A
+  <a href="/wiki/Limiter" title="Limiter">
+   limiter
+  </a>
+  is a compressor with a high ratio and, generally, a fast attack time. Compression with ratio of 10:1 or more is generally considered limiting.
+  <sup class="reference" id="cite_ref-tcelectronic.com_25-0">
+   <a href="#cite_note-tcelectronic.com-25">
+    [25]
+   </a>
+  </sup>
+ </p>
+ <p>
+  <i>
+   Brick wall limiting
+  </i>
+  has a very high ratio and a very fast attack time. Ideally, this ensures that an audio signal never exceeds the amplitude of the threshold. Ratios of 20:1  all the way up to ∞:1 are considered
+  <i>
+   brick wall
+  </i>
+  .
+  <sup class="reference" id="cite_ref-tcelectronic.com_25-1">
+   <a href="#cite_note-tcelectronic.com-25">
+    [25]
+   </a>
+  </sup>
+  The sonic results of more than momentary and infrequent brick-wall limiting are harsh and unpleasant, thus it is more common as a safety device in live sound and broadcast applications.
+ </p>
+ <p>
+  Some
+  <a class="mw-redirect" href="/wiki/Bass_amp" title="Bass amp">
+   bass amps
+  </a>
+  and
+  <a class="mw-redirect" href="/wiki/PA_system" title="PA system">
+   PA system
+  </a>
+  amplifiers include limiters to prevent sudden volume peaks from causing distortion or damaging the speakers.
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Side-chaining">
+   Side-chaining
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=21" title="Edit section: Side-chaining">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <figure typeof="mw:File/Thumb">
+  <a class="mw-file-description" href="/wiki/File:Compressor_Sidechain.svg">
+   <img class="mw-file-element" data-file-height="250" data-file-width="500" decoding="async" height="150" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Compressor_Sidechain.svg/300px-Compressor_Sidechain.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Compressor_Sidechain.svg/450px-Compressor_Sidechain.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Compressor_Sidechain.svg/600px-Compressor_Sidechain.svg.png 2x" width="300"/>
+  </a>
+  <figcaption>
+   The sidechain of a feed-forward compressor
+  </figcaption>
+ </figure>
+ <style data-mw-deduplicate="TemplateStyles:r1235681985">
+  .mw-parser-output .side-box{margin:4px 0;box-sizing:border-box;border:1px solid #aaa;font-size:88%;line-height:1.25em;background-color:var(--background-color-interactive-subtle,#f8f9fa);display:flow-root}.mw-parser-output .side-box-abovebelow,.mw-parser-output .side-box-text{padding:0.25em 0.9em}.mw-parser-output .side-box-image{padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .side-box-imageright{padding:2px 0.9em 2px 0;text-align:center}@media(min-width:500px){.mw-parser-output .side-box-flex{display:flex;align-items:center}.mw-parser-output .side-box-text{flex:1;min-width:0}}@media(min-width:720px){.mw-parser-output .side-box{width:238px}.mw-parser-output .side-box-right{clear:right;float:right;margin-left:1em}.mw-parser-output .side-box-left{margin-right:1em}}
+ </style>
+ <style data-mw-deduplicate="TemplateStyles:r1096940132">
+  .mw-parser-output .listen .side-box-text{line-height:1.1em}.mw-parser-output .listen-plain{border:none;background:transparent}.mw-parser-output .listen-embedded{width:100%;margin:0;border-width:1px 0 0 0;background:transparent}.mw-parser-output .listen-header{padding:2px}.mw-parser-output .listen-embedded .listen-header{padding:2px 0}.mw-parser-output .listen-file-header{padding:4px 0}.mw-parser-output .listen .description{padding-top:2px}.mw-parser-output .listen .mw-tmh-player{max-width:100%}@media(max-width:719px){.mw-parser-output .listen{clear:both}}@media(min-width:720px){.mw-parser-output .listen:not(.listen-noimage){width:320px}.mw-parser-output .listen-left{overflow:visible;float:left}.mw-parser-output .listen-center{float:none;margin-left:auto;margin-right:auto}}
+ </style>
+ <div class="side-box side-box-right listen noprint">
+  <style data-mw-deduplicate="TemplateStyles:r1126788409">
+   .mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}
+  </style>
+  <div class="side-box-flex">
+   <div class="side-box-image">
+    <figure class="mw-halign-center" typeof="mw:File">
+     <span>
+      <img alt="" class="mw-file-element" data-file-height="160" data-file-width="160" decoding="async" height="50" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/50px-Gnome-mime-sound-openclipart.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/75px-Gnome-mime-sound-openclipart.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/100px-Gnome-mime-sound-openclipart.svg.png 2x" width="50"/>
+     </span>
+     <figcaption>
+     </figcaption>
+    </figure>
+   </div>
+   <div class="side-box-text plainlist">
+    <div class="haudio">
+     <div class="listen-file-header">
+      <a href="/wiki/File:Uplifting_Trance_Sidechain.ogg" title="File:Uplifting Trance Sidechain.ogg">
+       Uplifting Trance Sidechain
+      </a>
+     </div>
+     <div>
+      <span typeof="mw:File">
+       <span>
+        <audio class="mw-file-element" controls="" data-durationhint="32" data-mw-tmh="" data-mwprovider="wikimediacommons" data-mwtitle="Uplifting_Trance_Sidechain.ogg" id="mwe_player_0" preload="none" style="width:232px;" width="232">
+         <source data-height="0" data-width="0" src="//upload.wikimedia.org/wikipedia/commons/2/2b/Uplifting_Trance_Sidechain.ogg" type='audio/ogg; codecs="vorbis"'/>
+         <source data-height="0" data-transcodekey="mp3" data-width="0" src="//upload.wikimedia.org/wikipedia/commons/transcoded/2/2b/Uplifting_Trance_Sidechain.ogg/Uplifting_Trance_Sidechain.ogg.mp3" type="audio/mpeg"/>
+        </audio>
+       </span>
+      </span>
+     </div>
+     <div class="description">
+      The first 8 bars are without side-chaining applied, the second 8 are with side-chaining.
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="side-box-abovebelow">
+   <hr/>
+   <i class="selfreference">
+    Problems playing this file? See
+    <a href="/wiki/Help:Media" title="Help:Media">
+     media help
+    </a>
+    .
+   </i>
+  </div>
+ </div>
+ <p>
+  A compressor with a side-chain input controls gain from main input to output based on the level of the signal at the side-chain input.
+  <sup class="reference" id="cite_ref-Colletti_26-0">
+   <a href="#cite_note-Colletti-26">
+    [26]
+   </a>
+  </sup>
+  An early innovator of side-chain compression in an effects unit was the
+  <a href="/wiki/Eventide,_Inc" title="Eventide, Inc">
+   Eventide
+  </a>
+  Omnipressor from 1974.
+  <sup class="reference" id="cite_ref-27">
+   <a href="#cite_note-27">
+    [27]
+   </a>
+  </sup>
+  With side-chaining, the compressor behaves in the conventional manner when both main and side-chain inputs are supplied with the same signal. The side-chain input is used by
+  <a href="/wiki/Disc_jockey" title="Disc jockey">
+   disc jockeys
+  </a>
+  for
+  <a href="/wiki/Ducking" title="Ducking">
+   ducking
+  </a>
+  – lowering the music volume automatically when speaking. The DJ's microphone signal is routed to the side-chain input so that whenever the DJ speaks the compressor reduces the volume of the music. A sidechain with
+  <a href="/wiki/Equalization_(audio)" title="Equalization (audio)">
+   equalization
+  </a>
+  controls can be used to reduce the volume of signals that have a strong spectral content within a certain frequency range: it can act as a
+  <a class="mw-redirect" href="/wiki/De-esser" title="De-esser">
+   de-esser
+  </a>
+  , reducing the level of vocal
+  <a class="mw-redirect" href="/wiki/Sibilance" title="Sibilance">
+   sibilance
+  </a>
+  in the range of 6–9 kHz.
+  <sup class="reference" id="cite_ref-28">
+   <a href="#cite_note-28">
+    [28]
+   </a>
+  </sup>
+  Another use of the side-chain in music production serves to maintain a loud bass track without the
+  <a href="/wiki/Bass_drum" title="Bass drum">
+   bass drum
+  </a>
+  causing undue peaks that result in loss of overall
+  <a href="/wiki/Headroom_(audio_signal_processing)" title="Headroom (audio signal processing)">
+   headroom
+  </a>
+  .
+  <sup class="reference" id="cite_ref-Colletti_26-1">
+   <a href="#cite_note-Colletti-26">
+    [26]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Parallel_compression">
+   Parallel compression
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=22" title="Edit section: Parallel compression">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Inserting the compressor in a parallel signal path is known as
+  <a href="/wiki/Parallel_compression" title="Parallel compression">
+   parallel compression
+  </a>
+  . It is a form of upward compression that facilitates dynamic control without significant audible side effects so long as the ratio is relatively low and the compressor's sound is relatively neutral. On the other hand, a high compression ratio with significant audible artifacts can be chosen in one of the two parallel signal paths. This is used by some concert mixers and recording engineers as an artistic effect called
+  <i>
+   New York compression
+  </i>
+  or
+  <i>
+   Motown compression
+  </i>
+  . Combining a linear signal with a compressor and then reducing the output gain of the compression chain results in low-level detail enhancement without any peak reduction; The compressor significantly adds to the combined gain at low levels only.
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Multiband_compression">
+   Multiband compression
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=23" title="Edit section: Multiband compression">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Multiband compressors can act differently on different frequency bands. The advantage of multiband compression over full-bandwidth compression is that problems related to a specific frequency range can be fixed without unnecessary compression in the other, unrelated frequencies. The downside is that frequency-specific compression is more complex and requires more processing capacity than full-bandwidth compression and can introduce phase issues.
+  <sup class="reference" id="cite_ref-29">
+   <a href="#cite_note-29">
+    [29]
+   </a>
+  </sup>
+ </p>
+ <p>
+  Multiband compressors work by first splitting the signal through some number of
+  <a class="mw-redirect" href="/wiki/Band-pass_filters" title="Band-pass filters">
+   band-pass filters
+  </a>
+  ,
+  <a href="/wiki/Audio_crossover" title="Audio crossover">
+   crossover filters
+  </a>
+  or
+  <a href="/wiki/Filter_bank" title="Filter bank">
+   filter banks
+  </a>
+  . Each split signal then passes through its own compressor and is independently adjustable for threshold, ratio, attack, and release. The signals are then recombined and an additional limiting circuit may be employed to ensure that the combined signals do not create unwanted peak levels.
+ </p>
+ <p>
+  In music production, multiband compressors are primarily an
+  <a class="mw-redirect" href="/wiki/Audio_mastering" title="Audio mastering">
+   audio mastering
+  </a>
+  tool, but their inclusion in
+  <a href="/wiki/Digital_audio_workstation" title="Digital audio workstation">
+   digital audio workstation
+  </a>
+  plug-in sets is increasing their use among mix engineers. 
+The TC Electronic Finalizer included a three band compressor and was a popular
+  <a class="mw-redirect" href="/wiki/Audio_mastering" title="Audio mastering">
+   audio mastering
+  </a>
+  tool around year 2000.
+  <sup class="reference" id="cite_ref-30">
+   <a href="#cite_note-30">
+    [30]
+   </a>
+  </sup>
+ </p>
+ <p>
+  On-air signal chains of
+  <a class="mw-redirect" href="/wiki/Radio_station" title="Radio station">
+   radio stations
+  </a>
+  commonly use multiband compressors to increase
+  <a href="/wiki/Loudness" title="Loudness">
+   loudness
+  </a>
+  while avoiding
+  <a href="/wiki/Overmodulation" title="Overmodulation">
+   overmodulation
+  </a>
+  . Having a louder sound is often considered an advantage in commercial broadcasting.
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Serial_compression">
+   Serial compression
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=24" title="Edit section: Serial compression">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Serial compression is a technique used in
+  <a href="/wiki/Sound_recording_and_reproduction" title="Sound recording and reproduction">
+   sound recording
+  </a>
+  and
+  <a href="/wiki/Audio_mixing_(recorded_music)" title="Audio mixing (recorded music)">
+   mixing
+  </a>
+  .  Serial compression is achieved by using two fairly different compressors in a signal chain.  One compressor generally stabilizes the
+  <a href="/wiki/Dynamic_range" title="Dynamic range">
+   dynamic range
+  </a>
+  while the other aggressively compresses stronger peaks.  This is the normal internal signal routing in common combination devices marketed as
+  <i>
+   compressor-limiters
+  </i>
+  , where an RMS compressor (for general gain control) is followed by a fast peak-sensing limiter (for overload protection). Done properly, even heavy serial compression can sound natural in a way not possible with a single compressor.  It is most often used to even out erratic
+  <a class="mw-redirect" href="/wiki/Vocal" title="Vocal">
+   vocals
+  </a>
+  and
+  <a href="/wiki/Guitar" title="Guitar">
+   guitars
+  </a>
+  .
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Software_audio_players">
+   Software audio players
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=25" title="Edit section: Software audio players">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  Some
+  <a class="mw-redirect" href="/wiki/Audio_player_(software)" title="Audio player (software)">
+   software audio players
+  </a>
+  support
+  <a href="/wiki/Plug-in_(computing)" title="Plug-in (computing)">
+   plugins
+  </a>
+  that implement compression.  These can increase loudness of audio tracks, or level out the volume of highly-variable music (such as
+  <a href="/wiki/Classical_music" title="Classical music">
+   classical music
+  </a>
+  , or a playlist that spans multiple music types). This improves the listenability of audio played through poor-quality speakers, or when played in noisy environments (such as in a car or during a party).
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="Objective_influence_on_the_signal">
+   Objective influence on the signal
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=26" title="Edit section: Objective influence on the signal">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  In an article published in January 2014 by the
+  <i>
+   Journal of the Audio Engineering Society
+  </i>
+  , Emmanuel Deruty and Damien Tardieu performed a systematic study describing the influence of compressors and brickwall limiters on the musical audio signal. The experiment involved four software limiters: Waves L2, Sonnox Oxford Limiter, Thomas Mundt's Loudmax, Blue Cat's Protector, as well as four software compressors: Waves H-Comp, Sonnox Oxford Dynamics, Sonalksis SV-3157, and URS 1970. The study provides objective data on what limiters and compressors do to the audio signal.
+  <sup class="reference" id="cite_ref-DerutyTardieuAES_31-0">
+   <a href="#cite_note-DerutyTardieuAES-31">
+    [31]
+   </a>
+  </sup>
+ </p>
+ <p>
+  Five signal descriptors were considered:
+  <a class="mw-redirect" href="/wiki/RMS_power" title="RMS power">
+   RMS power
+  </a>
+  ,
+  <a href="/wiki/EBU_R_128" title="EBU R 128">
+   EBU R 128
+  </a>
+  integrated loudness,
+  <sup class="reference" id="cite_ref-EBU3341_18-1">
+   <a href="#cite_note-EBU3341-18">
+    [18]
+   </a>
+  </sup>
+  <a href="/wiki/Crest_factor" title="Crest factor">
+   crest factor
+  </a>
+  , R 128 LRA,
+  <sup class="reference" id="cite_ref-EBU3342_19-1">
+   <a href="#cite_note-EBU3342-19">
+    [19]
+   </a>
+  </sup>
+  and density of clipped samples. RMS power accounts for the signal's physical level, R 128 loudness for the perceived level.
+  <sup class="reference" id="cite_ref-EBU3341_18-2">
+   <a href="#cite_note-EBU3341-18">
+    [18]
+   </a>
+  </sup>
+  The crest factor, which is the difference between the signal's peak and its average power,
+  <sup class="reference" id="cite_ref-DerutyTardieuAES_31-1">
+   <a href="#cite_note-DerutyTardieuAES-31">
+    [31]
+   </a>
+  </sup>
+  is on occasions considered as a basis for the measure of micro-dynamics, for instance in the
+  <i>
+   TT Dynamic Range Meter
+  </i>
+  plug-in.
+  <sup class="reference" id="cite_ref-32">
+   <a href="#cite_note-32">
+    [32]
+   </a>
+  </sup>
+  Finally, R 128 LRA has been repeatedly considered as a measure of macro-dynamics or dynamics in the musical sense.
+  <sup class="reference" id="cite_ref-DerutyTardieuAES_31-2">
+   <a href="#cite_note-DerutyTardieuAES-31">
+    [31]
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-SOS_Dynamic_Range_33-0">
+   <a href="#cite_note-SOS_Dynamic_Range-33">
+    [33]
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-34">
+   <a href="#cite_note-34">
+    [34]
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-35">
+   <a href="#cite_note-35">
+    [35]
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-36">
+   <a href="#cite_note-36">
+    [36]
+   </a>
+  </sup>
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Limiters">
+   Limiters
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=27" title="Edit section: Limiters">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  The tested limiters had the following influence on the signal:
+ </p>
+ <ul>
+  <li>
+   increase of RMS power,
+  </li>
+  <li>
+   increase of EBU R 128 loudness,
+  </li>
+  <li>
+   decrease of crest factor,
+  </li>
+  <li>
+   decrease of EBU R 128  LRA, but only for high amounts of limiting,
+  </li>
+  <li>
+   increase of clipped sample density.
+  </li>
+ </ul>
+ <p>
+  In other words, limiters increase both physical and perceptual levels, increase the density of clipped samples, decrease the crest factor and decrease macro-dynamics (LRA) given that the amount of limiting is substantial.
+ </p>
+ <div class="mw-heading mw-heading3">
+  <h3 id="Compressors">
+   Compressors
+  </h3>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=28" title="Edit section: Compressors">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <p>
+  As far as the compressors are concerned, the authors performed two processing sessions, using a fast attack (0.5 ms) in one case, and a slow attack (50 ms) in the other. Make-up gain is deactivated, but the resulting file is normalized.
+ </p>
+ <p>
+  Set with a fast attack, the tested compressors had the following influence on the signal:
+ </p>
+ <ul>
+  <li>
+   slight increase of RMS power,
+  </li>
+  <li>
+   slight increase of EBU R 128 loudness,
+  </li>
+  <li>
+   decrease of crest factor,
+  </li>
+  <li>
+   decrease of EBU R 128 LRA,
+  </li>
+  <li>
+   slight decrease of clipped sample density.
+  </li>
+ </ul>
+ <p>
+  In other words, fast-attack compressors increase both physical and perceptual levels, but only slightly. They decrease the density of clipped samples, and decrease both crest factor and macro-dynamics.
+ </p>
+ <p>
+  Set with a slow attack, the tested compressors had the following influence on the signal:
+ </p>
+ <ul>
+  <li>
+   decrease of RMS power,
+  </li>
+  <li>
+   decrease of EBU R 128 loudness,
+  </li>
+  <li>
+   no influence on crest factor,
+  </li>
+  <li>
+   decrease of EBU R 128 LRA,
+  </li>
+  <li>
+   no influence on clipped sample density.
+  </li>
+ </ul>
+ <p>
+  In other words, slow-attack compressors decrease both physical and perceptual levels, decrease macro-dynamics, but have no influence on crest factor and clipped sample density.
+ </p>
+ <div class="mw-heading mw-heading2">
+  <h2 id="See_also">
+   See also
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=29" title="Edit section: See also">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <ul>
+  <li>
+   <a href="/wiki/1176_Peak_Limiter" title="1176 Peak Limiter">
+    1176 Peak Limiter
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Automatic_gain_control" title="Automatic gain control">
+    Automatic gain control
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Gain_compression" title="Gain compression">
+    Gain compression
+   </a>
+   , similar (but generally undesired) reductions in waveform gain, caused by amplifier circuit imperfections
+  </li>
+  <li>
+   <a href="/wiki/LA-2A_Leveling_Amplifier" title="LA-2A Leveling Amplifier">
+    LA-2A Leveling Amplifier
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Squelch" title="Squelch">
+    Squelch
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Tone_mapping" title="Tone mapping">
+    Tone mapping
+   </a>
+   , the photographic equivalent
+  </li>
+ </ul>
+ <div class="mw-heading mw-heading2">
+  <h2 id="References">
+   References
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=30" title="Edit section: References">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <style data-mw-deduplicate="TemplateStyles:r1217336898">
+  .mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}
+ </style>
+ <div class="reflist">
+  <div class="mw-references-wrap mw-references-columns">
+   <ol class="references">
+    <li id="cite_note-Follansbee-1">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-Follansbee_1-0">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <style data-mw-deduplicate="TemplateStyles:r1215172403">
+       .mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a{background-size:contain}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a{background-size:contain}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a{background-size:contain}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#2C882D;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911F}html.skin-theme-clientpref-night .mw-parser-output .cs1-visible-error,html.skin-theme-clientpref-night .mw-parser-output .cs1-hidden-error{color:#f8a397}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-visible-error,html.skin-theme-clientpref-os .mw-parser-output .cs1-hidden-error{color:#f8a397}html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911F}}
+      </style>
+      <cite class="citation book cs1" id="CITEREFFollansbee2006">
+       Follansbee, Joe (2006).
+       <a class="external text" href="https://books.google.com/books?id=gEN1GbEgb5AC" rel="nofollow">
+        <i>
+         Hands-on Guide to Streaming Media: An Introduction to Delivering On-Demand Media
+        </i>
+       </a>
+       (1 ed.). Focal Press. p. 84.
+       <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+        ISBN
+       </a>
+       <a href="/wiki/Special:BookSources/9780240808635" title="Special:BookSources/9780240808635">
+        <bdi>
+         9780240808635
+        </bdi>
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/OCLC_(identifier)" title="OCLC (identifier)">
+        OCLC
+       </a>
+       <a class="external text" href="https://www.worldcat.org/oclc/1003326401" rel="nofollow">
+        1003326401
+       </a>
+       – via Google Books.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Hands-on+Guide+to+Streaming+Media%3A+An+Introduction+to+Delivering+On-Demand+Media&amp;rft.pages=84&amp;rft.edition=1&amp;rft.pub=Focal+Press&amp;rft.date=2006&amp;rft_id=info%3Aoclcnum%2F1003326401&amp;rft.isbn=9780240808635&amp;rft.aulast=Follansbee&amp;rft.aufirst=Joe&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DgEN1GbEgb5AC&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-Reese-2">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-Reese_2-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-Reese_2-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFReeseGrossGross2009">
+       Reese, David E; Gross, Lynne S; Gross, Brian (2009).
+       <span class="id-lock-registration" title="Free registration required">
+        <a class="external text" href="https://archive.org/details/audioproductionw0000rees" rel="nofollow">
+         <i>
+          Audio Production Worktext: Concepts, Techniques, and Equipment
+         </i>
+        </a>
+       </span>
+       . Focal Press. pp.
+       <a class="external text" href="https://archive.org/details/audioproductionw0000rees/page/149" rel="nofollow">
+        149
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+        ISBN
+       </a>
+       <a href="/wiki/Special:BookSources/978-0-240-81098-0" title="Special:BookSources/978-0-240-81098-0">
+        <bdi>
+         978-0-240-81098-0
+        </bdi>
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/OCLC_(identifier)" title="OCLC (identifier)">
+        OCLC
+       </a>
+       <a class="external text" href="https://www.worldcat.org/oclc/1011721139" rel="nofollow">
+        1011721139
+       </a>
+       – via Internet Archive.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Audio+Production+Worktext%3A+Concepts%2C+Techniques%2C+and+Equipment&amp;rft.pages=149&amp;rft.pub=Focal+Press&amp;rft.date=2009&amp;rft_id=info%3Aoclcnum%2F1011721139&amp;rft.isbn=978-0-240-81098-0&amp;rft.aulast=Reese&amp;rft.aufirst=David+E&amp;rft.au=Gross%2C+Lynne+S&amp;rft.au=Gross%2C+Brian&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Faudioproductionw0000rees&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-3">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-3">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFKadis">
+       Kadis, Jay.
+       <a class="external text" href="https://ccrma.stanford.edu/courses/192b/192b_Lecture_1_18.pdf" rel="nofollow">
+        "Dynamic Range Processing and Digital Effects"
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dynamic+Range+Processing+and+Digital+Effects&amp;rft.aulast=Kadis&amp;rft.aufirst=Jay&amp;rft_id=https%3A%2F%2Fccrma.stanford.edu%2Fcourses%2F192b%2F192b_Lecture_1_18.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFKadis">
+       Kadis, Jay.
+       <a class="external text" href="https://ccrma.stanford.edu/courses/192b/192b_Lecture_1_18.pdf" rel="nofollow">
+        "Dynamic Range Processing and Digital Effects"
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dynamic+Range+Processing+and+Digital+Effects&amp;rft.aulast=Kadis&amp;rft.aufirst=Jay&amp;rft_id=https%3A%2F%2Fccrma.stanford.edu%2Fcourses%2F192b%2F192b_Lecture_1_18.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-4">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-4">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFGiannoulisMassbergReiss2012">
+       Giannoulis, Dimitrios; Massberg, Michael; Reiss, Joshua D. (2012-07-09).
+       <a class="external text" href="https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf" rel="nofollow">
+        "Digital Dynamic Range Compressor Design—A Tutorial and Analysis"
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+       <i>
+        Journal of the Audio Engineering Society
+       </i>
+       .
+       <b>
+        60
+       </b>
+       (6): 399–408.
+       <a class="mw-redirect" href="/wiki/CiteSeerX_(identifier)" title="CiteSeerX (identifier)">
+        CiteSeerX
+       </a>
+       <span class="id-lock-free" title="Freely accessible">
+        <a class="external text" href="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.260.1340" rel="nofollow">
+         10.1.1.260.1340
+        </a>
+       </span>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2019-06-06
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Audio+Engineering+Society&amp;rft.atitle=Digital+Dynamic+Range+Compressor+Design%E2%80%94A+Tutorial+and+Analysis&amp;rft.volume=60&amp;rft.issue=6&amp;rft.pages=399-408&amp;rft.date=2012-07-09&amp;rft_id=https%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.260.1340%23id-name%3DCiteSeerX&amp;rft.aulast=Giannoulis&amp;rft.aufirst=Dimitrios&amp;rft.au=Massberg%2C+Michael&amp;rft.au=Reiss%2C+Joshua+D.&amp;rft_id=https%3A%2F%2Fwww.eecs.qmul.ac.uk%2F~josh%2Fdocuments%2F2012%2FGiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-5">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-5">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFCilettiHillWolff2008">
+       Ciletti, Eddie; Hill, David; Wolff, Paul (2008-04-19).
+       <a class="external text" href="http://www.tangible-technology.com/dynamics/comp_lim_ec_dh_pw2.html" rel="nofollow">
+        "An Overview of Compressor/Limiters and Their Guts"
+       </a>
+       .
+       <i>
+        www.tangible-technology.com
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2019-11-03
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.tangible-technology.com&amp;rft.atitle=An+Overview+of+Compressor%2FLimiters+and+Their+Guts&amp;rft.date=2008-04-19&amp;rft.aulast=Ciletti&amp;rft.aufirst=Eddie&amp;rft.au=Hill%2C+David&amp;rft.au=Wolff%2C+Paul&amp;rft_id=http%3A%2F%2Fwww.tangible-technology.com%2Fdynamics%2Fcomp_lim_ec_dh_pw2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-6">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-6">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="http://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf" rel="nofollow">
+        "Model LA-2A Leveling Amplifier"
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+       <i>
+        Universal Audio
+       </i>
+       (Manual).
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Universal+Audio&amp;rft.atitle=Model+LA-2A+Leveling+Amplifier&amp;rft_id=http%3A%2F%2Fmedia.uaudio.com%2Fassetlibrary%2Fl%2Fa%2Fla-2a_manual.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-7">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-7">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation magazine cs1" id="CITEREFBerners2006">
+       Berners, Dave (April 2006).
+       <a class="external text" href="https://www.uaudio.com/webzine/2006/april/text/content4.html" rel="nofollow">
+        "Compression Technology and Topology"
+       </a>
+       . Analog Obsession.
+       <i>
+        Universal Audio WebZine
+       </i>
+       . Vol. 4, no. 3. Universal Audio
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2016-08-29
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Universal+Audio+WebZine&amp;rft.atitle=Compression+Technology+and+Topology&amp;rft.volume=4&amp;rft.issue=3&amp;rft.date=2006-04&amp;rft.aulast=Berners&amp;rft.aufirst=Dave&amp;rft_id=https%3A%2F%2Fwww.uaudio.com%2Fwebzine%2F2006%2Fapril%2Ftext%2Fcontent4.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-8">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-8">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFMellor2017">
+       Mellor, David (2017-11-16).
+       <a class="external text" href="https://www.audiomasterclass.com/newsletter/audio-compressor-controls-the-threshold-control" rel="nofollow">
+        "Audio compressor controls: The threshold control"
+       </a>
+       .
+       <i>
+        Audio Masterclass
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2019-07-31
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Audio+Masterclass&amp;rft.atitle=Audio+compressor+controls%3A+The+threshold+control&amp;rft.date=2017-11-16&amp;rft.aulast=Mellor&amp;rft.aufirst=David&amp;rft_id=https%3A%2F%2Fwww.audiomasterclass.com%2Fnewsletter%2Faudio-compressor-controls-the-threshold-control&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-9">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-9">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFJeffsHoldenBohn2005">
+       Jeffs, Rick; Holden, Scott; Bohn, Dennis (September 2005).
+       <a class="external text" href="https://www.ranecommercial.com/kb_article.php?article=2129" rel="nofollow">
+        "Dynamics Processors – Technology &amp; Applications"
+       </a>
+       .
+       <i>
+        RaneNote
+       </i>
+       (155).
+       <a href="/wiki/Rane_Corporation" title="Rane Corporation">
+        Rane Corporation
+       </a>
+       : 6–7
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2012-12-21
+        </span>
+       </span>
+       .
+       <q>
+        There is no industry standard and different manufacturers define [release time] differently.
+       </q>
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=RaneNote&amp;rft.atitle=Dynamics+Processors+%E2%80%93+Technology+%26+Applications&amp;rft.issue=155&amp;rft.pages=6-7&amp;rft.date=2005-09&amp;rft.aulast=Jeffs&amp;rft.aufirst=Rick&amp;rft.au=Holden%2C+Scott&amp;rft.au=Bohn%2C+Dennis&amp;rft_id=https%3A%2F%2Fwww.ranecommercial.com%2Fkb_article.php%3Farticle%3D2129&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-10">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-10">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation magazine cs1" id="CITEREFWhite2000">
+       White, Paul (December 2000).
+       <a class="external text" href="https://web.archive.org/web/20150924122828/http://www.soundonsound.com/sos/dec00/articles/adcompression.htm" rel="nofollow">
+        "Advanced Compression Techniques"
+       </a>
+       .
+       <i>
+        Sound On Sound
+       </i>
+       . Archived from
+       <a class="external text" href="http://www.soundonsound.com/sos/dec00/articles/adcompression.htm" rel="nofollow">
+        the original
+       </a>
+       on 2015-09-24.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Sound+On+Sound&amp;rft.atitle=Advanced+Compression+Techniques&amp;rft.date=2000-12&amp;rft.aulast=White&amp;rft.aufirst=Paul&amp;rft_id=http%3A%2F%2Fwww.soundonsound.com%2Fsos%2Fdec00%2Farticles%2Fadcompression.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-11">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-11">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1">
+       <a class="external text" href="http://media.uaudio.com/support/manuals/v9100-vp4lQz6/UAD%20Plug-Ins%20Manual.pdf" rel="nofollow">
+        "Fairchild Tube Limiter Collection"
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+       <i>
+        UAD Plug-Ins Manual
+       </i>
+       (190724 ed.). Universal Audio. pp. 219–220.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Fairchild+Tube+Limiter+Collection&amp;rft.btitle=UAD+Plug-Ins+Manual&amp;rft.pages=219-220&amp;rft.edition=190724&amp;rft.pub=Universal+Audio&amp;rft_id=http%3A%2F%2Fmedia.uaudio.com%2Fsupport%2Fmanuals%2Fv9100-vp4lQz6%2FUAD%2520Plug-Ins%2520Manual.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-broadcastbridge-12">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-broadcastbridge_12-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-broadcastbridge_12-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFBridge2016">
+       Bridge, The Broadcast (November 23, 2016).
+       <a class="external text" href="https://www.thebroadcastbridge.com/content/entry/7278/using-compression-for-recorded-and-live-audio" rel="nofollow">
+        "Using Compression for Recorded and Live Audio - The Broadcast Bridge - Connecting IT to Broadcast"
+       </a>
+       .
+       <i>
+        www.thebroadcastbridge.com
+       </i>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.thebroadcastbridge.com&amp;rft.atitle=Using+Compression+for+Recorded+and+Live+Audio+-+The+Broadcast+Bridge+-+Connecting+IT+to+Broadcast&amp;rft.date=2016-11-23&amp;rft.aulast=Bridge&amp;rft.aufirst=The+Broadcast&amp;rft_id=https%3A%2F%2Fwww.thebroadcastbridge.com%2Fcontent%2Fentry%2F7278%2Fusing-compression-for-recorded-and-live-audio&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-13">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-13">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="https://www.sageaudio.com/blog/pre-mastering-tips/sidechaining.php" rel="nofollow">
+        "What is Sidechaining"
+       </a>
+       .
+       <i>
+        Sage Audio
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         12 May
+        </span>
+        2020
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Sage+Audio&amp;rft.atitle=What+is+Sidechaining&amp;rft_id=https%3A%2F%2Fwww.sageaudio.com%2Fblog%2Fpre-mastering-tips%2Fsidechaining.php&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-14">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-14">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation magazine cs1">
+       <a class="external text" href="https://www.soundonsound.com/techniques/techniques-vocal-de-essing" rel="nofollow">
+        "Techniques For Vocal De-essing"
+       </a>
+       .
+       <i>
+        Sound on Sound
+       </i>
+       . May 2009
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         12 May
+        </span>
+        2010
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Sound+on+Sound&amp;rft.atitle=Techniques+For+Vocal+De-essing&amp;rft.date=2009-05&amp;rft_id=https%3A%2F%2Fwww.soundonsound.com%2Ftechniques%2Ftechniques-vocal-de-essing&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-15">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-15">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFSabinSchoenike1998">
+       Sabin, William E.; Schoenike, Edgar O., eds. (1998).
+       <i>
+        HF radio systems &amp; circuits
+       </i>
+       (2nd ed.). Atlanta: Noble Pub. pp. 13–25, 271–290.
+       <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+        ISBN
+       </a>
+       <a href="/wiki/Special:BookSources/9781613530740" title="Special:BookSources/9781613530740">
+        <bdi>
+         9781613530740
+        </bdi>
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/OCLC_(identifier)" title="OCLC (identifier)">
+        OCLC
+       </a>
+       <a class="external text" href="https://www.worldcat.org/oclc/842936687" rel="nofollow">
+        842936687
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=HF+radio+systems+%26+circuits&amp;rft.place=Atlanta&amp;rft.pages=13-25%2C+271-290&amp;rft.edition=2nd&amp;rft.pub=Noble+Pub&amp;rft.date=1998&amp;rft_id=info%3Aoclcnum%2F842936687&amp;rft.isbn=9781613530740&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-16">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-16">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="https://www.ebu.ch/news/2011/loudness-france-chooses-ebu-r128" rel="nofollow">
+        "Loudness: France chooses EBU R128 to bolster audio laws"
+       </a>
+       .
+       <i>
+        <a href="/wiki/European_Broadcasting_Union" title="European Broadcasting Union">
+         European Broadcasting Union
+        </a>
+       </i>
+       . 25 October 2011
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         8 April
+        </span>
+        2020
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=European+Broadcasting+Union&amp;rft.atitle=Loudness%3A+France+chooses+EBU+R128+to+bolster+audio+laws&amp;rft.date=2011-10-25&amp;rft_id=https%3A%2F%2Fwww.ebu.ch%2Fnews%2F2011%2Floudness-france-chooses-ebu-r128&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-17">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-17">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFDavies2013">
+       Davies, David (9 December 2013).
+       <a class="external text" href="https://www.svgeurope.org/blog/headlines/sky-confirms-formal-adoption-of-r128-loudness-specification/" rel="nofollow">
+        "Sky confirms formal adoption of R128 loudness specification"
+       </a>
+       .
+       <i>
+        SVG Europe
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         8 April
+        </span>
+        2020
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=SVG+Europe&amp;rft.atitle=Sky+confirms+formal+adoption+of+R128+loudness+specification&amp;rft.date=2013-12-09&amp;rft.aulast=Davies&amp;rft.aufirst=David&amp;rft_id=https%3A%2F%2Fwww.svgeurope.org%2Fblog%2Fheadlines%2Fsky-confirms-formal-adoption-of-r128-loudness-specification%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-EBU3341-18">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-EBU3341_18-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-EBU3341_18-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-EBU3341_18-2">
+       <sup>
+        <i>
+         <b>
+          c
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation cs2">
+       <a class="external text" href="https://tech.ebu.ch/publications/tech3341" rel="nofollow">
+        <i>
+         <span>
+         </span>
+         'EBU Mode' metering to supplement EBU R 128 loudness normalisation
+        </i>
+       </a>
+       , Version 3.0, European Broadcasting Union, 2016-01-25, EBU Tech 3341
+       <span class="reference-accessdate">
+        , retrieved
+        <span class="nowrap">
+         2019-11-03
+        </span>
+       </span>
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%27EBU+Mode%27+metering+to+supplement+EBU+R+128+loudness+normalisation&amp;rft.series=Version+3.0&amp;rft.pub=European+Broadcasting+Union&amp;rft.date=2016-01-25&amp;rft_id=https%3A%2F%2Ftech.ebu.ch%2Fpublications%2Ftech3341&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-EBU3342-19">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-EBU3342_19-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-EBU3342_19-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation cs2">
+       <a class="external text" href="https://tech.ebu.ch/publications/tech3342" rel="nofollow">
+        <i>
+         Loudness range: A measure to supplement EBU R 128 loudness normalisation
+        </i>
+       </a>
+       , Version 3.0, Geneva: European Broadcasting Union, 2016-01-25, EBU Tech 3342
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Loudness+range%3A+A+measure+to+supplement+EBU+R+128+loudness+normalisation&amp;rft.place=Geneva&amp;rft.series=Version+3.0&amp;rft.pub=European+Broadcasting+Union&amp;rft.date=2016-01-25&amp;rft_id=https%3A%2F%2Ftech.ebu.ch%2Fpublications%2Ftech3342&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-20">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-20">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="https://www.pinsentmasons.com/out-law/news/tv-ads-sound-too-loud-and-rules-should-change-says-regulator" rel="nofollow">
+        "TV ads sound too loud and rules should change, says regulator"
+       </a>
+       .
+       <i>
+        Out-Law News
+       </i>
+       . Pinsent Masons
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2019-11-03
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Out-Law+News&amp;rft.atitle=TV+ads+sound+too+loud+and+rules+should+change%2C+says+regulator&amp;rft_id=https%3A%2F%2Fwww.pinsentmasons.com%2Fout-law%2Fnews%2Ftv-ads-sound-too-loud-and-rules-should-change-says-regulator&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-21">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-21">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="http://www.thewhippinpost.co.uk/mixing-music/compression-audio-mixing.htm" rel="nofollow">
+        "Compression in Audio Music Mixing"
+       </a>
+       .
+       <i>
+        The Whippinpost
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2013-12-07
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Whippinpost&amp;rft.atitle=Compression+in+Audio+Music+Mixing&amp;rft_id=http%3A%2F%2Fwww.thewhippinpost.co.uk%2Fmixing-music%2Fcompression-audio-mixing.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-22">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-22">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFSandlin2000">
+       Sandlin, Robert E. (2000).
+       <i>
+        The textbook of hearing aid amplification
+       </i>
+       (2nd ed.). San Diego, California: Singular Thomson Learning.
+       <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">
+        ISBN
+       </a>
+       <a href="/wiki/Special:BookSources/1565939972" title="Special:BookSources/1565939972">
+        <bdi>
+         1565939972
+        </bdi>
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/OCLC_(identifier)" title="OCLC (identifier)">
+        OCLC
+       </a>
+       <a class="external text" href="https://www.worldcat.org/oclc/42475568" rel="nofollow">
+        42475568
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+textbook+of+hearing+aid+amplification&amp;rft.place=San+Diego%2C+California&amp;rft.edition=2nd&amp;rft.pub=Singular+Thomson+Learning&amp;rft.date=2000&amp;rft_id=info%3Aoclcnum%2F42475568&amp;rft.isbn=1565939972&amp;rft.aulast=Sandlin&amp;rft.aufirst=Robert+E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-23">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-23">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="https://www.pewpewtactical.com/best-shooting-ear-protection/" rel="nofollow">
+        "10 Best Shooting Ear Protection"
+       </a>
+       . 27 May 2020
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2021-05-25
+        </span>
+       </span>
+       .
+       <q>
+        They are comfy for hours with their gel caps, have easily accessible button controls, great sound cutoff and compression, and allow for earplugs if the decent 22db NRR doesn't cut it.
+       </q>
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=10+Best+Shooting+Ear+Protection&amp;rft.date=2020-05-27&amp;rft_id=https%3A%2F%2Fwww.pewpewtactical.com%2Fbest-shooting-ear-protection%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-24">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-24">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFSalamonBello2017">
+       Salamon, Justin; Bello, Juan Pablo (March 2017). "Deep Convolutional Neural Networks and Data Augmentation for Environmental Sound Classification".
+       <i>
+        IEEE Signal Processing Letters
+       </i>
+       .
+       <b>
+        24
+       </b>
+       (3): 279–283.
+       <a class="mw-redirect" href="/wiki/ArXiv_(identifier)" title="ArXiv (identifier)">
+        arXiv
+       </a>
+       :
+       <span class="id-lock-free" title="Freely accessible">
+        <a class="external text" href="https://arxiv.org/abs/1608.04363" rel="nofollow">
+         1608.04363
+        </a>
+       </span>
+       .
+       <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">
+        Bibcode
+       </a>
+       :
+       <a class="external text" href="https://ui.adsabs.harvard.edu/abs/2017ISPL...24..279S" rel="nofollow">
+        2017ISPL...24..279S
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <a class="external text" href="https://doi.org/10.1109%2FLSP.2017.2657381" rel="nofollow">
+        10.1109/LSP.2017.2657381
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/ISSN_(identifier)" title="ISSN (identifier)">
+        ISSN
+       </a>
+       <a class="external text" href="https://www.worldcat.org/issn/1070-9908" rel="nofollow">
+        1070-9908
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/S2CID_(identifier)" title="S2CID (identifier)">
+        S2CID
+       </a>
+       <a class="external text" href="https://api.semanticscholar.org/CorpusID:3537408" rel="nofollow">
+        3537408
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Signal+Processing+Letters&amp;rft.atitle=Deep+Convolutional+Neural+Networks+and+Data+Augmentation+for+Environmental+Sound+Classification&amp;rft.volume=24&amp;rft.issue=3&amp;rft.pages=279-283&amp;rft.date=2017-03&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A3537408%23id-name%3DS2CID&amp;rft_id=info%3Abibcode%2F2017ISPL...24..279S&amp;rft_id=info%3Aarxiv%2F1608.04363&amp;rft.issn=1070-9908&amp;rft_id=info%3Adoi%2F10.1109%2FLSP.2017.2657381&amp;rft.aulast=Salamon&amp;rft.aufirst=Justin&amp;rft.au=Bello%2C+Juan+Pablo&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-tcelectronic.com-25">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-tcelectronic.com_25-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-tcelectronic.com_25-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation book cs1" id="CITEREFDroneyMassey2001">
+       Droney, Maureen; Massey, Howard (September 2001).
+       <a class="external text" href="https://web.archive.org/web/20101231072136/http://www.tcelectronic.com/media/droney_massey_2001_compres.pdf" rel="nofollow">
+        <i>
+         Compression Applications
+        </i>
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       .
+       <a href="/wiki/TC_Electronic" title="TC Electronic">
+        TC Electronic
+       </a>
+       . Archived from
+       <a class="external text" href="http://www.tcelectronic.com/media/droney_massey_2001_compres.pdf" rel="nofollow">
+        the original
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       on 2010-12-31.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Compression+Applications&amp;rft.pub=TC+Electronic&amp;rft.date=2001-09&amp;rft.aulast=Droney&amp;rft.aufirst=Maureen&amp;rft.au=Massey%2C+Howard&amp;rft_id=http%3A%2F%2Fwww.tcelectronic.com%2Fmedia%2Fdroney_massey_2001_compres.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-Colletti-26">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-Colletti_26-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-Colletti_26-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1" id="CITEREFColletti2013">
+       Colletti, Justin (2013-06-27).
+       <a class="external text" href="http://www.sonicscoop.com/2013/06/27/beyond-the-basics-sidechain-compression/" rel="nofollow">
+        "Beyond The Basics: Sidechain Compression"
+       </a>
+       .
+       <i>
+        SonicScoop
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2015-03-16
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=SonicScoop&amp;rft.atitle=Beyond+The+Basics%3A+Sidechain+Compression&amp;rft.date=2013-06-27&amp;rft.aulast=Colletti&amp;rft.aufirst=Justin&amp;rft_id=http%3A%2F%2Fwww.sonicscoop.com%2F2013%2F06%2F27%2Fbeyond-the-basics-sidechain-compression%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-27">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-27">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation web cs1">
+       <a class="external text" href="https://www.eventideaudio.com/blog/aagnello/50th-flashback-3-omnipressor" rel="nofollow">
+        "50th Flashback #3: The Omnipressor"
+       </a>
+       .
+       <i>
+        Eventide Audio
+       </i>
+       . 10 March 2021
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         17 May
+        </span>
+        2021
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Eventide+Audio&amp;rft.atitle=50th+Flashback+%233%3A+The+Omnipressor&amp;rft.date=2021-03-10&amp;rft_id=https%3A%2F%2Fwww.eventideaudio.com%2Fblog%2Faagnello%2F50th-flashback-3-omnipressor&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-28">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-28">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation magazine cs1" id="CITEREFSenior2009">
+       Senior, Mike (May 2009).
+       <a class="external text" href="http://www.soundonsound.com/sos/may09/articles/deessing.htm" rel="nofollow">
+        "Techniques For Vocal De-essing"
+       </a>
+       . Sound Advice.
+       <i>
+        Sound on Sound
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2015-03-16
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Sound+on+Sound&amp;rft.atitle=Techniques+For+Vocal+De-essing&amp;rft.date=2009-05&amp;rft.aulast=Senior&amp;rft.aufirst=Mike&amp;rft_id=http%3A%2F%2Fwww.soundonsound.com%2Fsos%2Fmay09%2Farticles%2Fdeessing.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-29">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-29">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation cs2">
+       <a class="external text" href="https://www.waves.com/1lib/pdf/plugins/linear-phase-multiband-compressor.pdf" rel="nofollow">
+        <i>
+         Waves – Linear-Phase MultiBand Software Audio Processor Users Guide
+        </i>
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       , p. 3
+       <span class="reference-accessdate">
+        , retrieved
+        <span class="nowrap">
+         2021-11-08
+        </span>
+       </span>
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Waves+%E2%80%93+Linear-Phase+MultiBand+Software+Audio+Processor+Users+Guide&amp;rft.pages=3&amp;rft_id=https%3A%2F%2Fwww.waves.com%2F1lib%2Fpdf%2Fplugins%2Flinear-phase-multiband-compressor.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-30">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-30">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation cs2">
+       <a class="external text" href="https://www.soundonsound.com/reviews/tc-electronic-finalizer-96k" rel="nofollow">
+        <i>
+         TC Electronic Finalizer 96K
+        </i>
+       </a>
+       <span class="reference-accessdate">
+        , retrieved
+        <span class="nowrap">
+         2023-12-29
+        </span>
+       </span>
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=TC+Electronic+Finalizer+96K&amp;rft_id=https%3A%2F%2Fwww.soundonsound.com%2Freviews%2Ftc-electronic-finalizer-96k&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-DerutyTardieuAES-31">
+     <span class="mw-cite-backlink">
+      ^
+      <a href="#cite_ref-DerutyTardieuAES_31-0">
+       <sup>
+        <i>
+         <b>
+          a
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-DerutyTardieuAES_31-1">
+       <sup>
+        <i>
+         <b>
+          b
+         </b>
+        </i>
+       </sup>
+      </a>
+      <a href="#cite_ref-DerutyTardieuAES_31-2">
+       <sup>
+        <i>
+         <b>
+          c
+         </b>
+        </i>
+       </sup>
+      </a>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFDerutyTardieu2014">
+       Deruty, Emmanuel; Tardieu, Damien (2014-02-03). "About Dynamic Processing in Mainstream Music".
+       <i>
+        Journal of the Audio Engineering Society
+       </i>
+       .
+       <b>
+        62
+       </b>
+       (1/2): 42–55.
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <a class="external text" href="https://doi.org/10.17743%2Fjaes.2014.0001" rel="nofollow">
+        10.17743/jaes.2014.0001
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Audio+Engineering+Society&amp;rft.atitle=About+Dynamic+Processing+in+Mainstream+Music&amp;rft.volume=62&amp;rft.issue=1%2F2&amp;rft.pages=42-55&amp;rft.date=2014-02-03&amp;rft_id=info%3Adoi%2F10.17743%2Fjaes.2014.0001&amp;rft.aulast=Deruty&amp;rft.aufirst=Emmanuel&amp;rft.au=Tardieu%2C+Damien&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-32">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-32">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation conference cs1" id="CITEREFVickers2010">
+       Vickers, Earl (4–7 November 2010).
+       <a class="external text" href="http://www.sfxmachine.com/docs/loudnesswar/loudness_war.pdf" rel="nofollow">
+        <i>
+         The Loudness War: Background, Speculation and Recommendations
+        </i>
+       </a>
+       <span class="cs1-format">
+        (PDF)
+       </span>
+       . 129th AES Convention. San Francisco:
+       <a href="/wiki/Audio_Engineering_Society" title="Audio Engineering Society">
+        Audio Engineering Society
+       </a>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         July 14,
+        </span>
+        2011
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=The+Loudness+War%3A+Background%2C+Speculation+and+Recommendations&amp;rft.place=San+Francisco&amp;rft.pub=Audio+Engineering+Society&amp;rft.date=2010-11-04%2F2010-11-07&amp;rft.aulast=Vickers&amp;rft.aufirst=Earl&amp;rft_id=http%3A%2F%2Fwww.sfxmachine.com%2Fdocs%2Floudnesswar%2Floudness_war.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-SOS_Dynamic_Range-33">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-SOS_Dynamic_Range_33-0">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation magazine cs1" id="CITEREFDeruty2011">
+       Deruty, Emmanuel (September 2011).
+       <a class="external text" href="https://www.soundonsound.com/sound-advice/dynamic-range-loudness-war" rel="nofollow">
+        "
+        <span class="cs1-kern-left">
+        </span>
+        'Dynamic Range' &amp; The Loudness War"
+       </a>
+       .
+       <i>
+        Sound on Sound
+       </i>
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2013-10-24
+        </span>
+       </span>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Sound+on+Sound&amp;rft.atitle=%27Dynamic+Range%27+%26+The+Loudness+War&amp;rft.date=2011-09&amp;rft.aulast=Deruty&amp;rft.aufirst=Emmanuel&amp;rft_id=https%3A%2F%2Fwww.soundonsound.com%2Fsound-advice%2Fdynamic-range-loudness-war&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-34">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-34">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFSerràCorralBoguñáHaro2012">
+       Serrà, J; Corral, A; Boguñá, M; Haro, M; Arcos, JL (26 July 2012).
+       <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3405292" rel="nofollow">
+        "Measuring the Evolution of Contemporary Western Popular Music"
+       </a>
+       .
+       <i>
+        Scientific Reports
+       </i>
+       .
+       <b>
+        2
+       </b>
+       : 521.
+       <a class="mw-redirect" href="/wiki/ArXiv_(identifier)" title="ArXiv (identifier)">
+        arXiv
+       </a>
+       :
+       <span class="id-lock-free" title="Freely accessible">
+        <a class="external text" href="https://arxiv.org/abs/1205.5651" rel="nofollow">
+         1205.5651
+        </a>
+       </span>
+       .
+       <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">
+        Bibcode
+       </a>
+       :
+       <a class="external text" href="https://ui.adsabs.harvard.edu/abs/2012NatSR...2E.521S" rel="nofollow">
+        2012NatSR...2E.521S
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <a class="external text" href="https://doi.org/10.1038%2Fsrep00521" rel="nofollow">
+        10.1038/srep00521
+       </a>
+       .
+       <a class="mw-redirect" href="/wiki/PMC_(identifier)" title="PMC (identifier)">
+        PMC
+       </a>
+       <span class="id-lock-free" title="Freely accessible">
+        <a class="external text" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3405292" rel="nofollow">
+         3405292
+        </a>
+       </span>
+       .
+       <a class="mw-redirect" href="/wiki/PMID_(identifier)" title="PMID (identifier)">
+        PMID
+       </a>
+       <a class="external text" href="https://pubmed.ncbi.nlm.nih.gov/22837813" rel="nofollow">
+        22837813
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Scientific+Reports&amp;rft.atitle=Measuring+the+Evolution+of+Contemporary+Western+Popular+Music&amp;rft.volume=2&amp;rft.pages=521&amp;rft.date=2012-07-26&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3405292%23id-name%3DPMC&amp;rft_id=info%3Abibcode%2F2012NatSR...2E.521S&amp;rft_id=info%3Aarxiv%2F1205.5651&amp;rft_id=info%3Apmid%2F22837813&amp;rft_id=info%3Adoi%2F10.1038%2Fsrep00521&amp;rft.aulast=Serr%C3%A0&amp;rft.aufirst=J&amp;rft.au=Corral%2C+A&amp;rft.au=Bogu%C3%B1%C3%A1%2C+M&amp;rft.au=Haro%2C+M&amp;rft.au=Arcos%2C+JL&amp;rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3405292&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-35">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-35">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFHjortkjærWalther-Hansen2014">
+       Hjortkjær, Jens; Walther-Hansen, Mads (2014-02-03). "Perceptual Effects of Dynamic Range Compression in Popular Music Recordings".
+       <i>
+        Journal of the Audio Engineering Society
+       </i>
+       .
+       <b>
+        62
+       </b>
+       (1/2): 37–41.
+       <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">
+        doi
+       </a>
+       :
+       <a class="external text" href="https://doi.org/10.17743%2Fjaes.2014.0003" rel="nofollow">
+        10.17743/jaes.2014.0003
+       </a>
+       .
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Audio+Engineering+Society&amp;rft.atitle=Perceptual+Effects+of+Dynamic+Range+Compression+in+Popular+Music+Recordings&amp;rft.volume=62&amp;rft.issue=1%2F2&amp;rft.pages=37-41&amp;rft.date=2014-02-03&amp;rft_id=info%3Adoi%2F10.17743%2Fjaes.2014.0003&amp;rft.aulast=Hjortkj%C3%A6r&amp;rft.aufirst=Jens&amp;rft.au=Walther-Hansen%2C+Mads&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+     </span>
+    </li>
+    <li id="cite_note-36">
+     <span class="mw-cite-backlink">
+      <b>
+       <a href="#cite_ref-36">
+        ^
+       </a>
+      </b>
+     </span>
+     <span class="reference-text">
+      <link href="mw-data:TemplateStyles:r1215172403" rel="mw-deduplicated-inline-style"/>
+      <cite class="citation journal cs1" id="CITEREFSkovenborg2012">
+       Skovenborg, Esben (2012-04-26).
+       <span class="id-lock-subscription" title="Paid subscription required">
+        <a class="external text" href="http://www.aes.org/e-lib/browse.cfm?elib=16254" rel="nofollow">
+         "Loudness Range (LRA) - Design and Evaluation"
+        </a>
+       </span>
+       . Audio Engineering Society
+       <span class="reference-accessdate">
+        . Retrieved
+        <span class="nowrap">
+         2019-11-04
+        </span>
+       </span>
+       – via AES E-Library.
+      </cite>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Loudness+Range+%28LRA%29+-+Design+and+Evaluation&amp;rft.date=2012-04-26&amp;rft.aulast=Skovenborg&amp;rft.aufirst=Esben&amp;rft_id=http%3A%2F%2Fwww.aes.org%2Fe-lib%2Fbrowse.cfm%3Felib%3D16254&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+range+compression">
+      </span>
+      <span class="cs1-visible-error citation-comment">
+       <code class="cs1-code">
+        {{
+        <a href="/wiki/Template:Cite_journal" title="Template:Cite journal">
+         cite journal
+        </a>
+        }}
+       </code>
+       :
+      </span>
+      <span class="cs1-visible-error citation-comment">
+       Cite journal requires
+       <code class="cs1-code">
+        |journal=
+       </code>
+       (
+       <a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">
+        help
+       </a>
+       )
+      </span>
+     </span>
+    </li>
+   </ol>
+  </div>
+ </div>
+ <div class="mw-heading mw-heading2">
+  <h2 id="External_links">
+   External links
+  </h2>
+  <span class="mw-editsection">
+   <span class="mw-editsection-bracket">
+    [
+   </span>
+   <a href="/w/index.php?title=Dynamic_range_compression&amp;action=edit&amp;section=31" title="Edit section: External links">
+    <span>
+     edit
+    </span>
+   </a>
+   <span class="mw-editsection-bracket">
+    ]
+   </span>
+  </span>
+ </div>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20190605192013/http://home.btconnect.com/ssa/whitepaper/whitepaper.htm" rel="nofollow">
+    Description of expansion, compression, and limiting in an audio processor
+   </a>
+   at the
+   <a href="/wiki/Wayback_Machine" title="Wayback Machine">
+    Wayback Machine
+   </a>
+   (archived 2019-06-05)
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20070707155321/http://www-ccrma.stanford.edu/~jos/filters/Nonlinear_Filter_Example_Dynamic.html" rel="nofollow">
+    Dynamic range compression
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="http://www.sweetwater.com/expert-center/techtips/d--03/20/2002" rel="nofollow">
+    Article on Optical Compressors
+   </a>
+   from
+   <a href="/wiki/Sweetwater_Sound" title="Sweetwater Sound">
+    Sweetwater Sound
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://www.youtube.com/watch?v=STtSV-QHxVM" rel="nofollow">
+    Information on Compression in Home Recording
+   </a>
+  </li>
+ </ul>
+ <div class="navbox-styles">
+  <style data-mw-deduplicate="TemplateStyles:r1129693374">
+   .mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:" · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}
+  </style>
+  <style data-mw-deduplicate="TemplateStyles:r1236075235">
+   .mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}body.skin--responsive .mw-parser-output .navbox-image img{max-width:none!important}@media print{body.ns-0 .mw-parser-output .navbox{display:none!important}}
+  </style>
+  <link href="mw-data:TemplateStyles:r1129693374" rel="mw-deduplicated-inline-style"/>
+  <link href="mw-data:TemplateStyles:r1129693374" rel="mw-deduplicated-inline-style"/>
+ </div>
+ <div aria-labelledby="Music_production" class="navbox" role="navigation" style="padding:3px">
+  <table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <link href="mw-data:TemplateStyles:r1129693374" rel="mw-deduplicated-inline-style"/>
+      <style data-mw-deduplicate="TemplateStyles:r1236085633">
+       .mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}html.skin-theme-clientpref-night .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}}@media print{.mw-parser-output .navbar{display:none!important}}
+      </style>
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:Music_production" title="Template:Music production">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-talk">
+         <a href="/wiki/Template_talk:Music_production" title="Template talk:Music production">
+          <abbr title="Discuss this template">
+           t
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a href="/wiki/Special:EditPage/Template:Music_production" title="Special:EditPage/Template:Music production">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div id="Music_production" style="font-size:114%;margin:0 4em">
+       <a href="/wiki/Record_producer" title="Record producer">
+        Music production
+       </a>
+      </div>
+     </th>
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width:1%">
+      <a href="/wiki/Audio_engineer" title="Audio engineer">
+       Engineering
+      </a>
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0">
+      <div style="padding:0 0.25em">
+       <ul>
+        <li>
+         <a href="/wiki/Audio_filter" title="Audio filter">
+          Audio filter
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Mastering_(audio)" title="Mastering (audio)">
+          Audio mastering
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Audio_mixing_(recorded_music)" title="Audio mixing (recorded music)">
+          Audio mixing
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Critical_distance" title="Critical distance">
+          Critical distance
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Effects_loop" title="Effects loop">
+          Effects loop
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Effects_unit" title="Effects unit">
+          Effects unit
+         </a>
+         <ul>
+          <li>
+           <a href="/wiki/Talk_box" title="Talk box">
+            Talk box
+           </a>
+          </li>
+          <li>
+           <a href="/wiki/Wah-wah_pedal" title="Wah-wah pedal">
+            Wah-wah pedal
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/wiki/Diffusion_(acoustics)" title="Diffusion (acoustics)">
+          Diffusion
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Microphone" title="Microphone">
+          Microphone
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Overdubbing" title="Overdubbing">
+          Overdubbing
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Ping-pong_recording" title="Ping-pong recording">
+          Ping-ponging
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Punch_in/out" title="Punch in/out">
+          Punch in/out
+         </a>
+        </li>
+        <li>
+         <a class="mw-redirect" href="/wiki/Sound_recording" title="Sound recording">
+          Sound recording
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Tape_loop" title="Tape loop">
+          Tape loop
+         </a>
+        </li>
+       </ul>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width:1%">
+      <a href="/wiki/Audio_signal_processing" title="Audio signal processing">
+       Signal
+       <br/>
+       processing
+      </a>
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0">
+      <div style="padding:0 0.25em">
+       <ul>
+        <li>
+         <a href="/wiki/Audio_time_stretching_and_pitch_scaling" title="Audio time stretching and pitch scaling">
+          Pitch shift
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Auto-Tune" title="Auto-Tune">
+          Auto-Tune
+         </a>
+        </li>
+        <li>
+         <a class="mw-redirect" href="/wiki/Chorus_effect" title="Chorus effect">
+          Chorus effect
+         </a>
+        </li>
+        <li>
+         <a class="mw-selflink selflink">
+          Compression
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Delay_(audio_effect)" title="Delay (audio effect)">
+          Delay effect
+         </a>
+         (
+         <a href="/wiki/Send_tape_echo_echo_delay" title="Send tape echo echo delay">
+          STEED
+         </a>
+         )
+        </li>
+        <li>
+         <a href="/wiki/Distortion_(music)" title="Distortion (music)">
+          Distortion
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Double_tracking" title="Double tracking">
+          Double tracking
+         </a>
+         (
+         <a href="/wiki/Automatic_double_tracking" title="Automatic double tracking">
+          ADT
+         </a>
+         )
+        </li>
+        <li>
+         <a href="/wiki/Ducking" title="Ducking">
+          Ducking
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Equalization_(audio)" title="Equalization (audio)">
+          Equalization
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Exciter_(effect)" title="Exciter (effect)">
+          Exciter effect
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Flanging" title="Flanging">
+          Flanging
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Octave_effect" title="Octave effect">
+          Octave effect
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Noise_gate" title="Noise gate">
+          Noise gate
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Phaser_(effect)" title="Phaser (effect)">
+          Phaser
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Pumping_(audio)" title="Pumping (audio)">
+          Pumping
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Reverb_effect" title="Reverb effect">
+          Reverb
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Reverse_echo" title="Reverse echo">
+          Reverse echo
+         </a>
+        </li>
+       </ul>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width:1%">
+      <div class="hlist">
+       <ul>
+        <li>
+         Practices
+        </li>
+        <li>
+         <br/>
+         aesthetics
+        </li>
+       </ul>
+      </div>
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0">
+      <div style="padding:0 0.25em">
+       <ul>
+        <li>
+         <a href="/wiki/Hip_hop_production" title="Hip hop production">
+          Hip hop production
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Lo-fi_music" title="Lo-fi music">
+          Lo-fi
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Overproduction_(music)" title="Overproduction (music)">
+          Overproduction
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Recording_studio_as_an_instrument" title="Recording studio as an instrument">
+          Recording studio as an instrument
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Sampling_(music)" title="Sampling (music)">
+          Sampling
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Turntablism" title="Turntablism">
+          Turntablism
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Wall_of_Sound" title="Wall of Sound">
+          Wall of Sound
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Xenochrony" title="Xenochrony">
+          Xenochrony
+         </a>
+        </li>
+       </ul>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width:1%">
+      <div class="hlist">
+       <ul>
+        <li>
+         Roles
+        </li>
+        <li>
+         <br/>
+         professions
+        </li>
+       </ul>
+      </div>
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0">
+      <div style="padding:0 0.25em">
+       <ul>
+        <li>
+         <a href="/wiki/Arrangement" title="Arrangement">
+          Arranger
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Audio_engineer" title="Audio engineer">
+          Audio engineer
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Backup_band" title="Backup band">
+          Backup band
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Bandleader" title="Bandleader">
+          Bandleader
+         </a>
+        </li>
+        <li>
+         <a class="mw-redirect" href="/wiki/DJ" title="DJ">
+          DJ
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Ghostwriter#Music" title="Ghostwriter">
+          Ghostwriters in music
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Horn_section" title="Horn section">
+          Horn section
+         </a>
+        </li>
+        <li>
+         <a class="mw-redirect" href="/wiki/Orchestrator" title="Orchestrator">
+          Orchestrator
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Record_producer" title="Record producer">
+          Record producer
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Rhythm_section" title="Rhythm section">
+          Rhythm section
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Session_musician" title="Session musician">
+          Session musician
+         </a>
+        </li>
+        <li>
+         <a class="mw-redirect" href="/wiki/Backup_singer" title="Backup singer">
+          Backup singer
+         </a>
+         <ul>
+          <li>
+           <a class="mw-redirect" href="/wiki/Ghost_singer" title="Ghost singer">
+            Ghost singer
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/wiki/Vocal_coach" title="Vocal coach">
+          Vocal coach
+         </a>
+        </li>
+       </ul>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width:1%">
+      Other
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0">
+      <div style="padding:0 0.25em">
+       <ul>
+        <li>
+         <a href="/wiki/Click_track" title="Click track">
+          Click track
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Interpolation_(popular_music)" title="Interpolation (popular music)">
+          Interpolation
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Loudness_war" title="Loudness war">
+          Loudness war
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Mashup_(music)" title="Mashup (music)">
+          Mashup
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Medley_(music)" title="Medley (music)">
+          Medley
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Music_technology_(electric)" title="Music technology (electric)">
+          Music technology (electric)
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Music_technology_(electronic_and_digital)" title="Music technology (electronic and digital)">
+          Music technology (electronic and digital)
+         </a>
+        </li>
+        <li>
+         <a href="/wiki/Remix" title="Remix">
+          Remix
+         </a>
+        </li>
+       </ul>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td class="navbox-abovebelow" colspan="2">
+      <div>
+       <b>
+        <span class="nowrap">
+         <span class="noviewer" typeof="mw:File">
+          <span>
+           <img alt="" class="mw-file-element" data-file-height="800" data-file-width="792" decoding="async" height="16" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/45_record.png/16px-45_record.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/45_record.png/24px-45_record.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c3/45_record.png/32px-45_record.png 2x" width="16"/>
+          </span>
+         </span>
+        </span>
+        <a href="/wiki/Portal:Record_production" title="Portal:Record production">
+         Record production portal
+        </a>
+       </b>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐678fc9cfc5‐xhl5v
+Cached time: 20240722212122
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.882 seconds
+Real time usage: 1.119 seconds
+Preprocessor visited node count: 3285/1000000
+Post‐expand include size: 95725/2097152 bytes
+Template argument size: 3494/2097152 bytes
+Highest expansion depth: 15/100
+Expensive parser function count: 15/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 157416/5000000 bytes
+Lua time usage: 0.564/10.000 seconds
+Lua memory usage: 6118288/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  958.613      1 -total
+ 44.81%  429.577      1 Template:Reflist
+ 16.38%  156.987      6 Template:Cite_book
+ 14.16%  135.785      1 Template:Music_production
+ 13.80%  132.333      1 Template:Navbox
+  9.06%   86.854      4 Template:Fix
+  9.02%   86.449      1 Template:Short_description
+  8.98%   86.092      3 Template:Citation_needed
+  7.57%   72.537     14 Template:Cite_web
+  7.53%   72.174      7 Template:Cite_journal
+-->
+ <!-- Saved in parser cache with key enwiki:pcache:idhash:262733-0!canonical and timestamp 20240722212122 and revision id 1225548979. Rendering was triggered because: page-view
+ -->
+</div>
